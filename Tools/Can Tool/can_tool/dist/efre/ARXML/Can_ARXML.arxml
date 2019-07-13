@@ -1,0 +1,21 @@
+<AUTOSAR xmlns="http://autosar.org/4.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/4.3.0 autosar_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>EcucDefs</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES>
+          <SHORT-NAME>Can</SHORT-NAME>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>CanGeneral</SHORT-NAME>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-PARAM-CONF-CONTAINER-DEF>
+              <SHORT-NAME>CanConfigSet</SHORT-NAME>
+              <SUB-CONTAINERS />
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

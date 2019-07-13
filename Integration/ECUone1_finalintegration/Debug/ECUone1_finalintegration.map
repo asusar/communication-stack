@@ -1,0 +1,1200 @@
+******************************************************************************
+                  TI ARM Linker PC v16.9.4                     
+******************************************************************************
+>> Linked Tue Jul 09 19:41:18 2019
+
+OUTPUT FILE NAME:   <ECUone1_finalintegration.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00008d5d
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00009c0c  000363f4  R  X
+  SRAM                  20000000   00008000  00001055  00006fab  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00009c10   00009c10    r-x
+  00000000    00000000    00000268   00000268    r-- .intvecs
+  00000268    00000268    00008d38   00008d38    r-x .text
+  00008fa0    00008fa0    00000a74   00000a74    r-- .const
+  00009a18    00009a18    000001f8   000001f8    r-- .cinit
+20000000    20000000    0000105c   00000000    rw-
+  20000000    20000000    0000026c   00000000    rw- .vtable
+  20000270    20000270    0000064f   00000000    rw- .data
+  200008c0    200008c0    0000059a   00000000    rw- .bss
+  20000e5c    20000e5c    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    00000268     
+                  00000000    00000268     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.text      0    00000268    00008d38     
+                  00000268    00001ab0     Can.obj (.text)
+                  00001d18    00000f88     sysctl.obj (.text)
+                  00002ca0    00000c6c     Helper_Functions.obj (.text)
+                  0000390c    00000ba0     gpio.obj (.text)
+                  000044ac    00000a30     can.obj (.text)
+                  00004edc    00000914     Com.obj (.text)
+                  000057f0    00000698     cantp.obj (.text)
+                  00005e88    00000660     CanIf.obj (.text)
+                  000064e8    0000063c     task.obj (.text)
+                  00006b24    00000598     alarm.obj (.text)
+                  000070bc    00000590     Com_Buffer.obj (.text)
+                  0000764c    000004b4     Rte_SeatHeater.obj (.text)
+                  00007b00    000003c0     interrupt.obj (.text)
+                  00007ec0    000001ec     event.obj (.text)
+                  000080ac    0000017c     LCDInit.obj (.text)
+                  00008228    00000164     PduR_helper.obj (.text)
+                  0000838c    00000140     PduR.obj (.text)
+                  000084cc    0000013c     port.obj (.text)
+                  00008608    0000012a     list.obj (.text)
+                  00008732    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : mpu_init.obj (.text)
+                  00008734    000000f8     main.obj (.text)
+                  0000882c    000000da     portasm.obj (.text)
+                  00008906    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : startup.obj (.text)
+                  00008908    000000b0     PORTF.obj (.text)
+                  000089b8    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
+                  00008a54    0000007c     Delay.obj (.text)
+                  00008ad0    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.obj (.text)
+                  00008b4a    00000072     Com_helper.obj (.text)
+                  00008bbc    00000070     Timer0A.obj (.text)
+                  00008c2c    00000070     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.obj (.text)
+                  00008c9c    00000068                                   : copy_decompress_lzss.obj (.text:decompress:lzss)
+                  00008d04    00000058     Rte.obj (.text)
+                  00008d5c    00000054     rtsv7M4_T_le_v4SPD16_eabi.lib : boot.obj (.text)
+                  00008db0    00000054                                   : exit.obj (.text)
+                  00008e04    0000004c                                   : cpy_tbl.obj (.text)
+                  00008e50    00000044                                   : fd_tou_t2.obj (.text)
+                  00008e94    0000003e     cpu.obj (.text)
+                  00008ed2    00000002     --HOLE-- [fill = 0]
+                  00008ed4    00000030     Dio.obj (.text)
+                  00008f04    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : args_main.obj (.text)
+                  00008f1c    00000018                                   : ll_mul_t2.obj (.text)
+                  00008f34    00000014     Rte_SeatSensorLeft.obj (.text)
+                  00008f48    00000014     Rte_SeatSensorRight.obj (.text)
+                  00008f5c    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.text)
+                  00008f70    0000000e                                   : copy_decompress_none.obj (.text:decompress:none)
+                  00008f7e    0000000c                                   : copy_zero_init.obj (.text:decompress:ZI)
+                  00008f8a    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00008f96    00000006     sysctl.obj (.text:SysCtlDelay)
+                  00008f9c    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.obj (.text)
+
+.const     0    00008fa0    00000a74     
+                  00008fa0    000001b0     sysctl.obj (.const:g_pppui32XTALtoVCO)
+                  00009150    00000154     Can.obj (.const:CanContainer)
+                  000092a4    00000154     Can.obj (.const:MailboxCfg_MAP)
+                  000093f8    000000d8     gpio.obj (.const:g_ppui32GPIOIntMapSnowflake)
+                  000094d0    000000c0     gpio.obj (.const:g_ppui32GPIOIntMapBlizzard)
+                  00009590    0000009c     interrupt.obj (.const:g_pui32Regs)
+                  0000962c    00000090     gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  000096bc    00000004     port.obj (.const)
+                  000096c0    00000080     CanTp_Cfg.obj (.const:CanTp_RxNSdu)
+                  00009740    0000006c     sysctl.obj (.const:g_pui32Xtals)
+                  000097ac    00000060     Com_Cfg.obj (.const:ComSignal)
+                  0000980c    00000004     --HOLE-- [fill = 0]
+                  00009810    00000050     CanTp_Cfg.obj (.const:CanTp_TxNSdu)
+                  00009860    00000050     Com_Cfg.obj (.const:ComIPdu)
+                  000098b0    00000034     Lcfg.obj (.const)
+                  000098e4    00000030     sysctl.obj (.const:g_sXTALtoMEMTIM)
+                  00009914    00000004     --HOLE-- [fill = 0]
+                  00009918    00000020     CanTp_Cfg.obj (.const:CanTp_Config)
+                  00009938    00000020     interrupt.obj (.const:g_pui32Priority)
+                  00009958    00000020     can.obj (.const:g_ui16CANBitValues)
+                  00009978    00000018     Can.obj (.const:McuPerClockConfigData)
+                  00009990    00000014     interrupt.obj (.const:g_pui32Dii16Regs)
+                  000099a4    00000014     interrupt.obj (.const:g_pui32EnRegs)
+                  000099b8    00000014     interrupt.obj (.const:g_pui32PendRegs)
+                  000099cc    00000014     interrupt.obj (.const:g_pui32UnpendRegs)
+                  000099e0    0000000c     Com_Cfg.obj (.const:ComConfiguration)
+                  000099ec    0000000c     Com_Cfg.obj (.const:ComIPduSignalRefs_Can_Message_1)
+                  000099f8    0000000c     Com_Cfg.obj (.const:ComIPduSignalRefs_Can_Message_2)
+                  00009a04    00000008     sysctl.obj (.const:g_pui32VCOFrequencies)
+                  00009a0c    00000008     gpio.obj (.const)
+
+.cinit     0    00009a18    000001f8     
+                  00009a18    000001bf     (.cinit..data.load) [load image, compression = lzss]
+                  00009bd7    00000001     --HOLE-- [fill = 0]
+                  00009bd8    0000000c     (__TI_handler_table)
+                  00009be4    00000004     --HOLE-- [fill = 0]
+                  00009be8    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00009bf0    00000008     (.cinit..vtable.load) [load image, compression = zero_init]
+                  00009bf8    00000018     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.vtable    0    20000000    0000026c     UNINITIALIZED
+                  20000000    0000026c     interrupt.obj (.vtable)
+
+.data      0    20000270    0000064f     UNINITIALIZED
+                  20000270    00000120     Lcfg.obj (.data:AlarmStruct)
+                  20000390    00000114     CanTpRuntime.obj (.data:CanTpRunTimeData)
+                  200004a4    000000a0     CanIf_Sec_cfg.obj (.data:CanIf_rxPduConfigTypeInstance)
+                  20000544    000000a0     CanIf_Sec_cfg.obj (.data:CanIf_txPduConfigTypeInstance)
+                  200005e4    000000a0     Lcfg.obj (.data:TaskStruct)
+                  20000684    00000004     Com.obj (.data)
+                  20000688    00000048     CanIf_Sec_cfg.obj (.data:CanIf_initConfigTypeInstance)
+                  200006d0    0000003c     Lcfg.obj (.data:CounterStruct)
+                  2000070c    0000002c     task.obj (.data)
+                  20000738    00000020     Lcfg.obj (.data:EventsInTask)
+                  20000758    0000001c     PduR_helper.obj (.data:real_CanIf)
+                  20000774    0000001c     PduR_helper.obj (.data:virtual_CanIf)
+                  20000790    00000018     CanIf_Sec_cfg.obj (.data:CanIfBufferCfgInstance)
+                  200007a8    00000018     CanIf_Sec_cfg.obj (.data:CanIfCtrlCfgInstance)
+                  200007c0    00000014     PduR_helper.obj (.data:real_com)
+                  200007d4    00000014     PduR_helper.obj (.data:virtual_com)
+                  200007e8    00000010     CanIf_Sec_cfg.obj (.data:CanIfHrhCfgInstance)
+                  200007f8    00000010     CanIf_Sec_cfg.obj (.data:CanIfHthCfgInstance)
+                  20000808    00000010     CanIf_Sec_cfg.obj (.data:CanIfInitHohCfgInstance)
+                  20000818    00000010     PduR_helper.obj (.data:Com_type)
+                  20000828    00000010     PduR_helper.obj (.data:real_CanTp_rx)
+                  20000838    00000010     PduR_helper.obj (.data:virtual_CanTp_rx)
+                  20000848    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.data:$O1$$)
+                  20000854    0000000c     Com_Asu_Cfg.obj (.data:ComAsuConfiguration)
+                  20000860    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.data:$O1$$)
+                  20000868    00000008     CanIf_Sec_cfg.obj (.data:CanIf_configTypeInstance)
+                  20000870    00000008     CanIf_Sec_cfg.obj (.data:CanIf_hrhRangeConfigTypeInstance)
+                  20000878    00000008     alarm.obj (.data)
+                  20000880    00000008     PduR_helper.obj (.data:real_CanTp_tx)
+                  20000888    00000008     PduR_helper.obj (.data:virtual_CanTp_tx)
+                  20000890    00000007     CanIf_Sec_cfg.obj (.data:try)
+                  20000897    00000001     Rte_SeatSensorLeft.obj (.data)
+                  20000898    00000006     Rte_SeatHeater.obj (.data)
+                  2000089e    00000004     CanIf.obj (.data:canif_Comfrimation_Value)
+                  200008a2    00000004     CanIf.obj (.data:canif_cantp_value)
+                  200008a6    00000002     Helper_Functions.obj (.data:canif_ids)
+                  200008a8    00000004     port.obj (.data)
+                  200008ac    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : stkdepth_vars.obj (.data)
+                  200008b0    00000003     Can.obj (.data)
+                  200008b3    00000002     Helper_Functions.obj (.data:cantp_cainf_FC)
+                  200008b5    00000002     Helper_Functions.obj (.data:cantp_com_copy_tx)
+                  200008b7    00000002     Helper_Functions.obj (.data:cantp_com_rx_or_copy)
+                  200008b9    00000002     Com.obj (.data:com_pdur)
+                  200008bb    00000002     Can.obj (.data:state_transition_flag)
+                  200008bd    00000001     Rte_SeatSensorRight.obj (.data)
+                  200008be    00000001     CanIf.obj (.data:canif_PduR_Value)
+
+.bss       0    200008c0    0000059a     UNINITIALIZED
+                  200008c0    00000200     Lcfg.obj (.bss:IdleStack)
+                  20000ac0    00000200     Lcfg.obj (.bss:TaskStack1)
+                  20000cc0    00000064     task.obj (.bss:ReadyTasksLists)
+                  20000d24    00000004     Can.obj (.bss:Can_ControllerMode)
+                  20000d28    00000040     (.common:Com_Asu_IPdu)
+                  20000d68    00000024     (.common:Message_Confirmation)
+                  20000d8c    00000014     task.obj (.bss:DelayedTaskList1)
+                  20000da0    00000014     task.obj (.bss:DelayedTaskList2)
+                  20000db4    00000014     task.obj (.bss:SuspendedTaskList)
+                  20000dc8    00000014     (.common:CounterList)
+                  20000ddc    00000014     (.common:DormantAlarmList)
+                  20000df0    0000000c     PduR.obj (.bss:info$1)
+                  20000dfc    00000008     CanIf.obj (.bss:arr$1)
+                  20000e04    00000008     task.obj (.bss)
+                  20000e0c    00000008     (.common:ComIPduBuffer_2)
+                  20000e14    00000007     (.common:CanIf_Global)
+                  20000e1b    00000004     Can.obj (.bss:ErrorState$3)
+                  20000e1f    00000004     Can.obj (.bss:IntDisableCount)
+                  20000e23    00000004     Can.obj (.bss:IntEnableCount)
+                  20000e27    00000004     Can.obj (.bss:Int_disable_in_stop_mode)
+                  20000e2b    00000004     Can.obj (.bss:Int_enable_in_start_mode)
+                  20000e2f    00000001     Can.obj (.bss)
+                  20000e30    00000004     (.common:CanIfPrivateCfgInst)
+                  20000e34    00000004     (.common:CanIfRxPduCfg_Arr)
+                  20000e38    00000004     (.common:CanIf_ConfigPtr)
+                  20000e3c    00000004     (.common:ComConfig)
+                  20000e40    00000004     (.common:ComIPduBuffer_1)
+                  20000e44    00000004     (.common:ComSignalBuffer_1)
+                  20000e48    00000004     (.common:ComSignalBuffer_2)
+                  20000e4c    00000004     (.common:ComSignalBuffer_3)
+                  20000e50    00000004     (.common:ComSignalBuffer_4)
+                  20000e54    00000004     (.common:l)
+                  20000e58    00000001     (.common:controlleft)
+                  20000e59    00000001     (.common:controlright)
+
+.stack     0    20000e5c    00000200     UNINITIALIZED
+                  20000e5c    00000200     --HOLE--
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    .\
+       tm4c123gh6pm_startup_ccs.obj   12      616       0      
+       LCDInit.obj                    380     0         0      
+       main.obj                       248     0         0      
+       PORTF.obj                      176     0         0      
+       Delay.obj                      124     0         0      
+       Timer0A.obj                    112     0         0      
+       Dio.obj                        48      0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         1100    616       0      
+                                                               
+    .\OS\
+       task.obj                       1596    0         212    
+       Lcfg.obj                       0       52        1564   
+       alarm.obj                      1432    0         48     
+       event.obj                      492     0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         3520    52        1824   
+                                                               
+    .\Rte\
+       Rte_SeatHeater.obj             1204    0         12     
+       Rte.obj                        88      0         0      
+       Rte_SeatSensorLeft.obj         20      0         1      
+       Rte_SeatSensorRight.obj        20      0         1      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         1332    0         14     
+                                                               
+    .\driverlib\
+       sysctl.obj                     3982    596       0      
+       gpio.obj                       2976    560       0      
+       can.obj                        2608    32        0      
+       interrupt.obj                  960     268       620    
+       cpu.obj                        62      0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         10588   1456      620    
+                                                               
+    .\freertos\
+       list.obj                       298     0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         298     0         0      
+                                                               
+    .\portable\
+       port.obj                       316     4         4      
+       portasm.obj                    218     0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         534     4         4      
+                                                               
+    .\source\
+       Can.obj                        6832    704       66     
+       Helper_Functions.obj           3180    0         8      
+       Com.obj                        2324    0         10     
+       cantp.obj                      1688    0         0      
+       CanIf.obj                      1632    0         36     
+       Com_Buffer.obj                 1424    0         0      
+       PduR_helper.obj                356     0         160    
+       CanIf_Sec_cfg.obj              0       0         511    
+       PduR.obj                       320     0         12     
+       CanTpRuntime.obj               0       0         276    
+       CanTp_Cfg.obj                  0       240       0      
+       Com_Cfg.obj                    0       212       28     
+       Com_helper.obj                 114     0         0      
+       Com_Asu_Cfg.obj                0       0         76     
+    +--+------------------------------+-------+---------+---------+
+       Total:                         17870   1156      1183   
+                                                               
+    C:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.4.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       memcpy_t2.obj                  156     0         0      
+       memset_t2.obj                  122     0         0      
+       autoinit.obj                   112     0         0      
+       copy_decompress_lzss.obj       104     0         0      
+       exit.obj                       84      0         12     
+       boot.obj                       84      0         0      
+       cpy_tbl.obj                    76      0         0      
+       fd_tou_t2.obj                  68      0         0      
+       _lock.obj                      20      0         8      
+       args_main.obj                  24      0         0      
+       ll_mul_t2.obj                  24      0         0      
+       copy_decompress_none.obj       14      0         0      
+       copy_zero_init.obj             12      0         0      
+       pre_init.obj                   4       0         0      
+       stkdepth_vars.obj              0       0         4      
+       mpu_init.obj                   2       0         0      
+       startup.obj                    2       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         908     0         24     
+                                                               
+       Stack:                         0       0         512    
+       Linker Generated:              0       499       0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   36150   3783      4181   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00009bf8 records: 3, size/record: 8, table size: 24
+	.data: load addr=00009a18, load size=000001bf bytes, run addr=20000270, run size=0000064f bytes, compression=lzss
+	.bss: load addr=00009be8, load size=00000008 bytes, run addr=200008c0, run size=0000059a bytes, compression=zero_init
+	.vtable: load addr=00009bf0, load size=00000008 bytes, run addr=20000000, run size=0000026c bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00009bd8 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                                                         
+-------   ----                                                                         
+0000694d  ActivateTask                                                                 
+00006651  AddTaskToReadyList                                                           
+00006ce1  AlarmHook                                                                    
+20000270  AlarmStruct                                                                  
+000098d8  BSW_Alarm_alarm4                                                             
+000098dc  BSW_Alarm_alarm5                                                             
+000098e0  BSW_Alarm_alarm6                                                             
+000098c4  BSW_Event_CanTp_MainFunction                                                 
+000098bc  BSW_Event_Com_MainFunctionRx                                                 
+000098c0  BSW_Event_Com_MainFunctionTx                                                 
+0000669f  BlockTask                                                                    
+00008db1  C$$EXIT                                                                      
+000046c5  CANBitRateSet                                                                
+00004655  CANBitTimingGet                                                              
+00004791  CANBitTimingSet                                                              
+00004641  CANDisable                                                                   
+0000462d  CANEnable                                                                    
+000049db  CANErrCntrGet                                                                
+000045b1  CANInit                                                                      
+000048cd  CANIntClear                                                                  
+0000486d  CANIntDisable                                                                
+00004857  CANIntEnable                                                                 
+0000481f  CANIntRegister                                                               
+00004883  CANIntStatus                                                                 
+0000483d  CANIntUnregister                                                             
+00004ead  CANMessageClear                                                              
+00004ca3  CANMessageGet                                                                
+00004a11  CANMessageSet                                                                
+00004939  CANRetryGet                                                                  
+00004907  CANRetrySet                                                                  
+00004955  CANStatusGet                                                                 
+00008ec9  CPUbasepriGet                                                                
+00008ebb  CPUbasepriSet                                                                
+00008e95  CPUcpsid                                                                     
+00008eab  CPUcpsie                                                                     
+00008ea1  CPUprimask                                                                   
+00008eb7  CPUwfi                                                                       
+000016ad  Can0_InterruptHandler                                                        
+000018a5  Can1_InterruptHandler                                                        
+00009150  CanContainer                                                                 
+20000790  CanIfBufferCfgInstance                                                       
+200007a8  CanIfCtrlCfgInstance                                                         
+200007e8  CanIfHrhCfgInstance                                                          
+200007f8  CanIfHthCfgInstance                                                          
+20000808  CanIfInitHohCfgInstance                                                      
+20000e30  CanIfPrivateCfgInst                                                          
+20000e34  CanIfRxPduCfg_Arr                                                            
+20000e38  CanIf_ConfigPtr                                                              
+00006191  CanIf_FindHrhChannel                                                         
+00006207  CanIf_FindRxPduEntry                                                         
+00006061  CanIf_FindTxPduEntry                                                         
+00006015  CanIf_GetControllerMode                                                      
+00005f4f  CanIf_GetPduMode                                                             
+20000e14  CanIf_Global                                                                 
+00005e89  CanIf_Init                                                                   
+000062dd  CanIf_RxIndication                                                           
+00005f93  CanIf_SetControllerMode                                                      
+00005edd  CanIf_SetPduMode                                                             
+000060c9  CanIf_Transmit                                                               
+00006463  CanIf_TxConfirmation                                                         
+20000868  CanIf_configTypeInstance                                                     
+20000870  CanIf_hrhRangeConfigTypeInstance                                             
+20000688  CanIf_initConfigTypeInstance                                                 
+200004a4  CanIf_rxPduConfigTypeInstance                                                
+20000544  CanIf_txPduConfigTypeInstance                                                
+20000390  CanTpRunTimeData                                                             
+00009918  CanTp_Config                                                                 
+00005971  CanTp_Init                                                                   
+00005bad  CanTp_MainFunction                                                           
+0000587b  CanTp_RxIndication                                                           
+000096c0  CanTp_RxNSdu                                                                 
+00005b97  CanTp_Shutdown                                                               
+00005a3d  CanTp_Transmit                                                               
+00005e09  CanTp_TxConfirmation                                                         
+00009810  CanTp_TxNSdu                                                                 
+00001c59  Can_DeInit                                                                   
+00000ffd  Can_DisableControllerInterrupts                                              
+000010a5  Can_EnableControllerInterrupts                                               
+0000068d  Can_GetControllerErrorState                                                  
+00001635  Can_GetControllerMode                                                        
+00001aa5  Can_Init                                                                     
+0000057d  Can_MainFunction_Mode                                                        
+00000e9d  Can_SetBaudrate                                                              
+00001159  Can_SetControllerMode                                                        
+000007a1  Can_Write                                                                    
+00007069  CancelAlarm                                                                  
+00006a45  ChainTask                                                                    
+00007ec1  CheckEventTask                                                               
+00008063  ClearEvent                                                                   
+20000854  ComAsuConfiguration                                                          
+20000e3c  ComConfig                                                                    
+000099e0  ComConfiguration                                                             
+00009860  ComIPdu                                                                      
+20000e40  ComIPduBuffer_1                                                              
+20000e0c  ComIPduBuffer_2                                                              
+000099ec  ComIPduSignalRefs_Can_Message_1                                              
+000099f8  ComIPduSignalRefs_Can_Message_2                                              
+000097ac  ComSignal                                                                    
+20000e44  ComSignalBuffer_1                                                            
+20000e48  ComSignalBuffer_2                                                            
+20000e4c  ComSignalBuffer_3                                                            
+20000e50  ComSignalBuffer_4                                                            
+20000d28  Com_Asu_IPdu                                                                 
+000054a9  Com_CopyRxData                                                               
+00005415  Com_CopyTxData                                                               
+00004edd  Com_Init                                                                     
+0000507b  Com_MainFunctionRx                                                           
+000051ad  Com_MainFunctionTx                                                           
+000070bd  Com_PackSignalsToPdu                                                         
+000073f5  Com_ReadSignalDataFromPduBuffer                                              
+00007615  Com_ReadSignalDataFromSignalBuffer                                           
+000053b7  Com_ReceiveSignal                                                            
+0000562b  Com_RxIndication                                                             
+000052ad  Com_SendSignal                                                               
+0000565b  Com_StartOfReception                                                         
+000056e3  Com_TpRxIndication                                                           
+00005743  Com_TpTxConfirmation                                                         
+00005539  Com_TriggerIPDUSend                                                          
+00007121  Com_UnPackSignalsFromPdu                                                     
+00007185  Com_WriteSignalDataToPduBuffer                                               
+000075e1  Com_WriteSignalDataToSignalBuffer                                            
+20000818  Com_type                                                                     
+00006b97  CounterIncrementHook                                                         
+20000dc8  CounterList                                                                  
+200006d0  CounterStruct                                                                
+00008a55  Delay_Us                                                                     
+00008a8f  Delay_ms                                                                     
+20000ddc  DormantAlarmList                                                             
+20000738  EventsInTask                                                                 
+00004485  GPIOADCTriggerDisable                                                        
+00004467  GPIOADCTriggerEnable                                                         
+00004449  GPIODMATriggerDisable                                                        
+0000442b  GPIODMATriggerEnable                                                         
+000039cb  GPIODirModeGet                                                               
+0000396f  GPIODirModeSet                                                               
+00003f3b  GPIOIntClear                                                                 
+00003eff  GPIOIntDisable                                                               
+00003ee5  GPIOIntEnable                                                                
+00003f4f  GPIOIntRegister                                                              
+00003f87  GPIOIntRegisterPin                                                           
+00003f19  GPIOIntStatus                                                                
+00003abb  GPIOIntTypeGet                                                               
+00003a17  GPIOIntTypeSet                                                               
+00003f6d  GPIOIntUnregister                                                            
+00003fb5  GPIOIntUnregisterPin                                                         
+00003d93  GPIOPadConfigGet                                                             
+00003b59  GPIOPadConfigSet                                                             
+000043cd  GPIOPinConfigure                                                             
+00003fd9  GPIOPinRead                                                                  
+00004011  GPIOPinTypeADC                                                               
+00004035  GPIOPinTypeCAN                                                               
+00004059  GPIOPinTypeComparator                                                        
+0000407d  GPIOPinTypeComparatorOutput                                                  
+000040a1  GPIOPinTypeDIVSCLK                                                           
+000040c5  GPIOPinTypeEPI                                                               
+000040e9  GPIOPinTypeEthernetLED                                                       
+0000410d  GPIOPinTypeEthernetMII                                                       
+00004131  GPIOPinTypeGPIOInput                                                         
+00004155  GPIOPinTypeGPIOOutput                                                        
+00004179  GPIOPinTypeGPIOOutputOD                                                      
+0000419d  GPIOPinTypeHibernateRTCCLK                                                   
+000041c1  GPIOPinTypeI2C                                                               
+000041e5  GPIOPinTypeI2CSCL                                                            
+00004209  GPIOPinTypeLCD                                                               
+0000422d  GPIOPinTypeOneWire                                                           
+00004251  GPIOPinTypePWM                                                               
+00004275  GPIOPinTypeQEI                                                               
+00004299  GPIOPinTypeSSI                                                               
+000042bd  GPIOPinTypeTimer                                                             
+000042e1  GPIOPinTypeTrace                                                             
+00004305  GPIOPinTypeUART                                                              
+00004329  GPIOPinTypeUSBAnalog                                                         
+0000434d  GPIOPinTypeUSBDigital                                                        
+00004371  GPIOPinTypeWakeHigh                                                          
+00004397  GPIOPinTypeWakeLow                                                           
+000043bd  GPIOPinWakeStatus                                                            
+00003ff1  GPIOPinWrite                                                                 
+00006e6d  GetAlarm                                                                     
+00006eed  GetAlarmBase                                                                 
+00007ff5  GetEvent                                                                     
+00006a81  GetTaskID                                                                    
+00006aa5  GetTaskState                                                                 
+00006291  Get_User_RxIndication                                                        
+0000626b  Get_User_RxIndication_Name                                                   
+00008785  INTERNAL_OS_T1                                                               
+000064e9  IdleTask                                                                     
+00006cbd  InitAlarm                                                                    
+00006b79  InitCounter                                                                  
+00008ed5  InitGPIO                                                                     
+000066c9  InitTask                                                                     
+00007cc1  IntDisable                                                                   
+00007c4f  IntEnable                                                                    
+00007d33  IntIsEnabled                                                                 
+00007b13  IntMasterDisable                                                             
+00007b03  IntMasterEnable                                                              
+00007e29  IntPendClear                                                                 
+00007db9  IntPendSet                                                                   
+00007c2b  IntPriorityGet                                                               
+00007ba3  IntPriorityGroupingGet                                                       
+00007b89  IntPriorityGroupingSet                                                       
+00007e83  IntPriorityMaskGet                                                           
+00007e77  IntPriorityMaskSet                                                           
+00007bdb  IntPrioritySet                                                               
+00007b23  IntRegister                                                                  
+00007e8b  IntTrigger                                                                   
+00007b75  IntUnregister                                                                
+0000812d  LCD_INIT                                                                     
+000080ad  LCD_command                                                                  
+000080f3  LCD_data                                                                     
+000092a4  MailboxCfg_MAP                                                               
+00009978  McuPerClockConfigData                                                        
+20000d68  Message_Confirmation                                                         
+0000877d  OS_T1                                                                        
+00008909  PORTF_Init                                                                   
+00008973  PORTF_SSL                                                                    
+00008951  PORTF_SSR                                                                    
+000083e3  PduR_CanIfRxIndication                                                       
+00008401  PduR_CanTpCopyRxData                                                         
+00008475  PduR_CanTpCopyTxData                                                         
+00008429  PduR_CanTpRxIndication                                                       
+00008449  PduR_CanTpStartOfReception                                                   
+000084a1  PduR_CanTpTxConfirmation                                                     
+0000838d  PduR_ComTransmit                                                             
+000098cc  RTE_Alarm_alarm1                                                             
+000098d0  RTE_Alarm_alarm2                                                             
+000098d4  RTE_Alarm_alarm3                                                             
+000098b0  RTE_Event_SeatHeaterEvent                                                    
+000098b4  RTE_Event_SeatSensorLeftUpdateTimer                                          
+000098b8  RTE_Event_SeatSensorRightUpdateTimer                                         
+00008f8b  ResetISR                                                                     
+00008d05  Rte_Read_LeftLevelReceiver_Left_Level_Heater                                 
+00008d13  Rte_Read_RightLevelReceiver_Right_Level_Interface                            
+00008d3d  Rte_Read_SeatSensorLeft_SeatSensorRunnableLeft_SensorLeft_LeftSensorValue    
+00008d4d  Rte_Read_SeatSensorRight_SeatSensorRunnableRight_SensorRight_RightSensorValue
+00008d21  Rte_Write_StatusLeft_PassengerOnLeftSeat                                     
+00008d2f  Rte_Write_StatusRight_PassengerOnRightSeat                                   
+UNDEFED   SHT$$INIT_ARRAY$$Base                                                        
+UNDEFED   SHT$$INIT_ARRAY$$Limit                                                       
+0000764d  SeatHeaterRunnable                                                           
+00008f35  SeatSensorRunnableLeft                                                       
+00008f49  SeatSensorRunnableRight                                                      
+00006fe5  SetAbsAlarm                                                                  
+00007f01  SetEvent                                                                     
+00006f25  SetRelAlarm                                                                  
+000067e1  StartOS                                                                      
+00002c5d  SysCtlAltClkConfig                                                           
+00002381  SysCtlClockFreqSet                                                           
+00002849  SysCtlClockGet                                                               
+00002c41  SysCtlClockOutConfig                                                         
+00002679  SysCtlClockSet                                                               
+00002285  SysCtlDeepSleep                                                              
+00002a11  SysCtlDeepSleepClockConfigSet                                                
+000029f5  SysCtlDeepSleepClockSet                                                      
+00002265  SysCtlDeepSleepPowerSet                                                      
+00008f97  SysCtlDelay                                                                  
+00001e11  SysCtlFlashSectorSizeGet                                                     
+00001de5  SysCtlFlashSizeGet                                                           
+00002ae7  SysCtlGPIOAHBDisable                                                         
+00002acb  SysCtlGPIOAHBEnable                                                          
+000021f9  SysCtlIntClear                                                               
+000021e1  SysCtlIntDisable                                                             
+000021cd  SysCtlIntEnable                                                              
+000021a5  SysCtlIntRegister                                                            
+00002209  SysCtlIntStatus                                                              
+000021bd  SysCtlIntUnregister                                                          
+0000224b  SysCtlLDODeepSleepGet                                                        
+0000223b  SysCtlLDODeepSleepSet                                                        
+00002235  SysCtlLDOSleepGet                                                            
+00002225  SysCtlLDOSleepSet                                                            
+000022bb  SysCtlMOSCConfigSet                                                          
+00002c25  SysCtlNMIClear                                                               
+00002c15  SysCtlNMIStatus                                                              
+000022d1  SysCtlPIOSCCalibrate                                                         
+00002ab5  SysCtlPWMClockGet                                                            
+00002a9b  SysCtlPWMClockSet                                                            
+00002151  SysCtlPeripheralClockGating                                                  
+00002109  SysCtlPeripheralDeepSleepDisable                                             
+000020b9  SysCtlPeripheralDeepSleepEnable                                              
+00001ff5  SysCtlPeripheralDisable                                                      
+00001fb9  SysCtlPeripheralEnable                                                       
+00001ef5  SysCtlPeripheralPowerOff                                                     
+00001eb9  SysCtlPeripheralPowerOn                                                      
+00001e39  SysCtlPeripheralPresent                                                      
+00001e79  SysCtlPeripheralReady                                                        
+00001f31  SysCtlPeripheralReset                                                        
+0000207d  SysCtlPeripheralSleepDisable                                                 
+00002039  SysCtlPeripheralSleepEnable                                                  
+00002275  SysCtlReset                                                                  
+00002331  SysCtlResetBehaviorGet                                                       
+00002321  SysCtlResetBehaviorSet                                                       
+000022a7  SysCtlResetCauseClear                                                        
+000022a1  SysCtlResetCauseGet                                                          
+00001ddb  SysCtlSRAMSizeGet                                                            
+0000227d  SysCtlSleep                                                                  
+00002251  SysCtlSleepPowerSet                                                          
+00002b0f  SysCtlUSBPLLDisable                                                          
+00002b03  SysCtlUSBPLLEnable                                                           
+00002b55  SysCtlVCOGet                                                                 
+00002b41  SysCtlVoltageEventClear                                                      
+00002b21  SysCtlVoltageEventConfig                                                     
+00002b35  SysCtlVoltageEventStatus                                                     
+000098c8  T1                                                                           
+200005e4  TaskStruct                                                                   
+00006999  TerminateTask                                                                
+00008c03  Timer0A_Handler                                                              
+00008bbd  Timer0A_Init                                                                 
+00007f95  WaitEvent                                                                    
+2000105c  __STACK_END                                                                  
+00000200  __STACK_SIZE                                                                 
+2000105c  __STACK_TOP                                                                  
+00009bf8  __TI_CINIT_Base                                                              
+00009c10  __TI_CINIT_Limit                                                             
+00009bd8  __TI_Handler_Table_Base                                                      
+00009be4  __TI_Handler_Table_Limit                                                     
+00008c2d  __TI_auto_init                                                               
+20000848  __TI_cleanup_ptr                                                             
+00008c9d  __TI_decompress_lzss                                                         
+00008f71  __TI_decompress_none                                                         
+2000084c  __TI_dtors_ptr                                                               
+20000850  __TI_enable_exit_profile_output                                              
+ffffffff  __TI_pprof_out_hndl                                                          
+ffffffff  __TI_prof_data_size                                                          
+ffffffff  __TI_prof_data_start                                                         
+00000000  __TI_static_base__                                                           
+00008f7f  __TI_zero_init                                                               
+00008e51  __aeabi_d2uiz                                                                
+00008f1d  __aeabi_lmul                                                                 
+00008ad1  __aeabi_memclr                                                               
+00008ad1  __aeabi_memclr4                                                              
+00008ad1  __aeabi_memclr8                                                              
+000089b9  __aeabi_memcpy                                                               
+000089b9  __aeabi_memcpy4                                                              
+000089b9  __aeabi_memcpy8                                                              
+00008ad3  __aeabi_memset                                                               
+00008ad3  __aeabi_memset4                                                              
+00008ad3  __aeabi_memset8                                                              
+ffffffff  __binit__                                                                    
+ffffffff  __c_args__                                                                   
+00008733  __mpu_init                                                                   
+20000e5c  __stack                                                                      
+00008f05  _args_main                                                                   
+00008d5d  _c_int00                                                                     
+20000860  _lock                                                                        
+00008f6b  _nop                                                                         
+00008f63  _register_lock                                                               
+00008f5d  _register_unlock                                                             
+00008907  _system_post_cinit                                                           
+00008f9d  _system_pre_init                                                             
+20000864  _unlock                                                                      
+00008db5  abort                                                                        
+ffffffff  binit                                                                        
+00002f85  calcRequiredProtocolFrameType                                                
+00002d1b  canReceivePaddingHelper                                                      
+00002ca1  canTansmitPaddingHelper                                                      
+2000089e  canif_Comfrimation_Value                                                     
+200008be  canif_PduR_Value                                                             
+200008a2  canif_cantp_value                                                            
+200008a6  canif_ids                                                                    
+200008b3  cantp_cainf_FC                                                               
+200008b5  cantp_com_copy_tx                                                            
+200008b7  cantp_com_rx_or_copy                                                         
+200008b9  com_pdur                                                                     
+20000e58  controlleft                                                                  
+20000e59  controlright                                                                 
+00002dfd  copySegmentToLocalRxBuffer                                                   
+00002d99  copySegmentToPduRRxBuffer                                                    
+00008e05  copy_in                                                                      
+00008dbd  exit                                                                         
+20000000  g_pfnRAMVectors                                                              
+00000000  g_pfnVectors                                                                 
+00002e5f  getFrameType                                                                 
+00002efd  getPduLength                                                                 
+00008229  get_ID                                                                       
+0000831f  get_type                                                                     
+0000332d  handleConsecutiveFrame                                                       
+000030f3  handleFirstFrame                                                             
+0000325f  handleFlowControlFrame                                                       
+00003519  handleNextTxFrameSent                                                        
+00002fed  handleSingleFrame                                                            
+00005833  initRx15765RuntimeData                                                       
+000057f1  initTx15765RuntimeData                                                       
+20000e54  l                                                                            
+20000897  leftsensor                                                                   
+00008735  main                                                                         
+200008ac  main_func_sp                                                                 
+000089b9  memcpy                                                                       
+00008ad9  memset                                                                       
+00008b65  power                                                                        
+2000070c  pxCurrentTCB                                                                 
+000084cd  pxPortInitialiseStack                                                        
+20000758  real_CanIf                                                                   
+20000828  real_CanTp_rx                                                                
+20000880  real_CanTp_tx                                                                
+200007c0  real_com                                                                     
+200008bd  rightsensor                                                                  
+20000898  s                                                                            
+00003643  sendFlowControlFrame                                                         
+0000378f  sendNextTxFrame                                                              
+2000089c  si                                                                           
+2000089d  su                                                                           
+20000890  try                                                                          
+000096bc  ulMaxSyscallInterruptPriority                                                
+0000883d  ulPortGetIPSR                                                                
+000086eb  uxListRemove                                                                 
+00008609  vListInitialise                                                              
+00008639  vListInitialiseItem                                                          
+00008685  vListInsert                                                                  
+00008649  vListInsertEnd                                                               
+000088f9  vPortEnableVFP                                                               
+0000856d  vPortEndScheduler                                                            
+0000856f  vPortEnterCritical                                                           
+0000858f  vPortExitCritical                                                            
+000088b5  vPortSVCHandler                                                              
+000085cb  vPortSetupTimerInterrupt                                                     
+000088d5  vPortStartFirstTask                                                          
+00006735  vTaskSwitchContext                                                           
+00008b4b  validateSignalID                                                             
+20000774  virtual_CanIf                                                                
+20000838  virtual_CanTp_rx                                                             
+20000888  virtual_CanTp_tx                                                             
+200007d4  virtual_com                                                                  
+00008855  xPortPendSVHandler                                                           
+00008537  xPortStartScheduler                                                          
+000085a5  xPortSysTickHandler                                                          
+000066e9  xTaskIncrementTick                                                           
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                                                         
+-------   ----                                                                         
+00000000  __TI_static_base__                                                           
+00000000  g_pfnVectors                                                                 
+00000200  __STACK_SIZE                                                                 
+0000057d  Can_MainFunction_Mode                                                        
+0000068d  Can_GetControllerErrorState                                                  
+000007a1  Can_Write                                                                    
+00000e9d  Can_SetBaudrate                                                              
+00000ffd  Can_DisableControllerInterrupts                                              
+000010a5  Can_EnableControllerInterrupts                                               
+00001159  Can_SetControllerMode                                                        
+00001635  Can_GetControllerMode                                                        
+000016ad  Can0_InterruptHandler                                                        
+000018a5  Can1_InterruptHandler                                                        
+00001aa5  Can_Init                                                                     
+00001c59  Can_DeInit                                                                   
+00001ddb  SysCtlSRAMSizeGet                                                            
+00001de5  SysCtlFlashSizeGet                                                           
+00001e11  SysCtlFlashSectorSizeGet                                                     
+00001e39  SysCtlPeripheralPresent                                                      
+00001e79  SysCtlPeripheralReady                                                        
+00001eb9  SysCtlPeripheralPowerOn                                                      
+00001ef5  SysCtlPeripheralPowerOff                                                     
+00001f31  SysCtlPeripheralReset                                                        
+00001fb9  SysCtlPeripheralEnable                                                       
+00001ff5  SysCtlPeripheralDisable                                                      
+00002039  SysCtlPeripheralSleepEnable                                                  
+0000207d  SysCtlPeripheralSleepDisable                                                 
+000020b9  SysCtlPeripheralDeepSleepEnable                                              
+00002109  SysCtlPeripheralDeepSleepDisable                                             
+00002151  SysCtlPeripheralClockGating                                                  
+000021a5  SysCtlIntRegister                                                            
+000021bd  SysCtlIntUnregister                                                          
+000021cd  SysCtlIntEnable                                                              
+000021e1  SysCtlIntDisable                                                             
+000021f9  SysCtlIntClear                                                               
+00002209  SysCtlIntStatus                                                              
+00002225  SysCtlLDOSleepSet                                                            
+00002235  SysCtlLDOSleepGet                                                            
+0000223b  SysCtlLDODeepSleepSet                                                        
+0000224b  SysCtlLDODeepSleepGet                                                        
+00002251  SysCtlSleepPowerSet                                                          
+00002265  SysCtlDeepSleepPowerSet                                                      
+00002275  SysCtlReset                                                                  
+0000227d  SysCtlSleep                                                                  
+00002285  SysCtlDeepSleep                                                              
+000022a1  SysCtlResetCauseGet                                                          
+000022a7  SysCtlResetCauseClear                                                        
+000022bb  SysCtlMOSCConfigSet                                                          
+000022d1  SysCtlPIOSCCalibrate                                                         
+00002321  SysCtlResetBehaviorSet                                                       
+00002331  SysCtlResetBehaviorGet                                                       
+00002381  SysCtlClockFreqSet                                                           
+00002679  SysCtlClockSet                                                               
+00002849  SysCtlClockGet                                                               
+000029f5  SysCtlDeepSleepClockSet                                                      
+00002a11  SysCtlDeepSleepClockConfigSet                                                
+00002a9b  SysCtlPWMClockSet                                                            
+00002ab5  SysCtlPWMClockGet                                                            
+00002acb  SysCtlGPIOAHBEnable                                                          
+00002ae7  SysCtlGPIOAHBDisable                                                         
+00002b03  SysCtlUSBPLLEnable                                                           
+00002b0f  SysCtlUSBPLLDisable                                                          
+00002b21  SysCtlVoltageEventConfig                                                     
+00002b35  SysCtlVoltageEventStatus                                                     
+00002b41  SysCtlVoltageEventClear                                                      
+00002b55  SysCtlVCOGet                                                                 
+00002c15  SysCtlNMIStatus                                                              
+00002c25  SysCtlNMIClear                                                               
+00002c41  SysCtlClockOutConfig                                                         
+00002c5d  SysCtlAltClkConfig                                                           
+00002ca1  canTansmitPaddingHelper                                                      
+00002d1b  canReceivePaddingHelper                                                      
+00002d99  copySegmentToPduRRxBuffer                                                    
+00002dfd  copySegmentToLocalRxBuffer                                                   
+00002e5f  getFrameType                                                                 
+00002efd  getPduLength                                                                 
+00002f85  calcRequiredProtocolFrameType                                                
+00002fed  handleSingleFrame                                                            
+000030f3  handleFirstFrame                                                             
+0000325f  handleFlowControlFrame                                                       
+0000332d  handleConsecutiveFrame                                                       
+00003519  handleNextTxFrameSent                                                        
+00003643  sendFlowControlFrame                                                         
+0000378f  sendNextTxFrame                                                              
+0000396f  GPIODirModeSet                                                               
+000039cb  GPIODirModeGet                                                               
+00003a17  GPIOIntTypeSet                                                               
+00003abb  GPIOIntTypeGet                                                               
+00003b59  GPIOPadConfigSet                                                             
+00003d93  GPIOPadConfigGet                                                             
+00003ee5  GPIOIntEnable                                                                
+00003eff  GPIOIntDisable                                                               
+00003f19  GPIOIntStatus                                                                
+00003f3b  GPIOIntClear                                                                 
+00003f4f  GPIOIntRegister                                                              
+00003f6d  GPIOIntUnregister                                                            
+00003f87  GPIOIntRegisterPin                                                           
+00003fb5  GPIOIntUnregisterPin                                                         
+00003fd9  GPIOPinRead                                                                  
+00003ff1  GPIOPinWrite                                                                 
+00004011  GPIOPinTypeADC                                                               
+00004035  GPIOPinTypeCAN                                                               
+00004059  GPIOPinTypeComparator                                                        
+0000407d  GPIOPinTypeComparatorOutput                                                  
+000040a1  GPIOPinTypeDIVSCLK                                                           
+000040c5  GPIOPinTypeEPI                                                               
+000040e9  GPIOPinTypeEthernetLED                                                       
+0000410d  GPIOPinTypeEthernetMII                                                       
+00004131  GPIOPinTypeGPIOInput                                                         
+00004155  GPIOPinTypeGPIOOutput                                                        
+00004179  GPIOPinTypeGPIOOutputOD                                                      
+0000419d  GPIOPinTypeHibernateRTCCLK                                                   
+000041c1  GPIOPinTypeI2C                                                               
+000041e5  GPIOPinTypeI2CSCL                                                            
+00004209  GPIOPinTypeLCD                                                               
+0000422d  GPIOPinTypeOneWire                                                           
+00004251  GPIOPinTypePWM                                                               
+00004275  GPIOPinTypeQEI                                                               
+00004299  GPIOPinTypeSSI                                                               
+000042bd  GPIOPinTypeTimer                                                             
+000042e1  GPIOPinTypeTrace                                                             
+00004305  GPIOPinTypeUART                                                              
+00004329  GPIOPinTypeUSBAnalog                                                         
+0000434d  GPIOPinTypeUSBDigital                                                        
+00004371  GPIOPinTypeWakeHigh                                                          
+00004397  GPIOPinTypeWakeLow                                                           
+000043bd  GPIOPinWakeStatus                                                            
+000043cd  GPIOPinConfigure                                                             
+0000442b  GPIODMATriggerEnable                                                         
+00004449  GPIODMATriggerDisable                                                        
+00004467  GPIOADCTriggerEnable                                                         
+00004485  GPIOADCTriggerDisable                                                        
+000045b1  CANInit                                                                      
+0000462d  CANEnable                                                                    
+00004641  CANDisable                                                                   
+00004655  CANBitTimingGet                                                              
+000046c5  CANBitRateSet                                                                
+00004791  CANBitTimingSet                                                              
+0000481f  CANIntRegister                                                               
+0000483d  CANIntUnregister                                                             
+00004857  CANIntEnable                                                                 
+0000486d  CANIntDisable                                                                
+00004883  CANIntStatus                                                                 
+000048cd  CANIntClear                                                                  
+00004907  CANRetrySet                                                                  
+00004939  CANRetryGet                                                                  
+00004955  CANStatusGet                                                                 
+000049db  CANErrCntrGet                                                                
+00004a11  CANMessageSet                                                                
+00004ca3  CANMessageGet                                                                
+00004ead  CANMessageClear                                                              
+00004edd  Com_Init                                                                     
+0000507b  Com_MainFunctionRx                                                           
+000051ad  Com_MainFunctionTx                                                           
+000052ad  Com_SendSignal                                                               
+000053b7  Com_ReceiveSignal                                                            
+00005415  Com_CopyTxData                                                               
+000054a9  Com_CopyRxData                                                               
+00005539  Com_TriggerIPDUSend                                                          
+0000562b  Com_RxIndication                                                             
+0000565b  Com_StartOfReception                                                         
+000056e3  Com_TpRxIndication                                                           
+00005743  Com_TpTxConfirmation                                                         
+000057f1  initTx15765RuntimeData                                                       
+00005833  initRx15765RuntimeData                                                       
+0000587b  CanTp_RxIndication                                                           
+00005971  CanTp_Init                                                                   
+00005a3d  CanTp_Transmit                                                               
+00005b97  CanTp_Shutdown                                                               
+00005bad  CanTp_MainFunction                                                           
+00005e09  CanTp_TxConfirmation                                                         
+00005e89  CanIf_Init                                                                   
+00005edd  CanIf_SetPduMode                                                             
+00005f4f  CanIf_GetPduMode                                                             
+00005f93  CanIf_SetControllerMode                                                      
+00006015  CanIf_GetControllerMode                                                      
+00006061  CanIf_FindTxPduEntry                                                         
+000060c9  CanIf_Transmit                                                               
+00006191  CanIf_FindHrhChannel                                                         
+00006207  CanIf_FindRxPduEntry                                                         
+0000626b  Get_User_RxIndication_Name                                                   
+00006291  Get_User_RxIndication                                                        
+000062dd  CanIf_RxIndication                                                           
+00006463  CanIf_TxConfirmation                                                         
+000064e9  IdleTask                                                                     
+00006651  AddTaskToReadyList                                                           
+0000669f  BlockTask                                                                    
+000066c9  InitTask                                                                     
+000066e9  xTaskIncrementTick                                                           
+00006735  vTaskSwitchContext                                                           
+000067e1  StartOS                                                                      
+0000694d  ActivateTask                                                                 
+00006999  TerminateTask                                                                
+00006a45  ChainTask                                                                    
+00006a81  GetTaskID                                                                    
+00006aa5  GetTaskState                                                                 
+00006b79  InitCounter                                                                  
+00006b97  CounterIncrementHook                                                         
+00006cbd  InitAlarm                                                                    
+00006ce1  AlarmHook                                                                    
+00006e6d  GetAlarm                                                                     
+00006eed  GetAlarmBase                                                                 
+00006f25  SetRelAlarm                                                                  
+00006fe5  SetAbsAlarm                                                                  
+00007069  CancelAlarm                                                                  
+000070bd  Com_PackSignalsToPdu                                                         
+00007121  Com_UnPackSignalsFromPdu                                                     
+00007185  Com_WriteSignalDataToPduBuffer                                               
+000073f5  Com_ReadSignalDataFromPduBuffer                                              
+000075e1  Com_WriteSignalDataToSignalBuffer                                            
+00007615  Com_ReadSignalDataFromSignalBuffer                                           
+0000764d  SeatHeaterRunnable                                                           
+00007b03  IntMasterEnable                                                              
+00007b13  IntMasterDisable                                                             
+00007b23  IntRegister                                                                  
+00007b75  IntUnregister                                                                
+00007b89  IntPriorityGroupingSet                                                       
+00007ba3  IntPriorityGroupingGet                                                       
+00007bdb  IntPrioritySet                                                               
+00007c2b  IntPriorityGet                                                               
+00007c4f  IntEnable                                                                    
+00007cc1  IntDisable                                                                   
+00007d33  IntIsEnabled                                                                 
+00007db9  IntPendSet                                                                   
+00007e29  IntPendClear                                                                 
+00007e77  IntPriorityMaskSet                                                           
+00007e83  IntPriorityMaskGet                                                           
+00007e8b  IntTrigger                                                                   
+00007ec1  CheckEventTask                                                               
+00007f01  SetEvent                                                                     
+00007f95  WaitEvent                                                                    
+00007ff5  GetEvent                                                                     
+00008063  ClearEvent                                                                   
+000080ad  LCD_command                                                                  
+000080f3  LCD_data                                                                     
+0000812d  LCD_INIT                                                                     
+00008229  get_ID                                                                       
+0000831f  get_type                                                                     
+0000838d  PduR_ComTransmit                                                             
+000083e3  PduR_CanIfRxIndication                                                       
+00008401  PduR_CanTpCopyRxData                                                         
+00008429  PduR_CanTpRxIndication                                                       
+00008449  PduR_CanTpStartOfReception                                                   
+00008475  PduR_CanTpCopyTxData                                                         
+000084a1  PduR_CanTpTxConfirmation                                                     
+000084cd  pxPortInitialiseStack                                                        
+00008537  xPortStartScheduler                                                          
+0000856d  vPortEndScheduler                                                            
+0000856f  vPortEnterCritical                                                           
+0000858f  vPortExitCritical                                                            
+000085a5  xPortSysTickHandler                                                          
+000085cb  vPortSetupTimerInterrupt                                                     
+00008609  vListInitialise                                                              
+00008639  vListInitialiseItem                                                          
+00008649  vListInsertEnd                                                               
+00008685  vListInsert                                                                  
+000086eb  uxListRemove                                                                 
+00008733  __mpu_init                                                                   
+00008735  main                                                                         
+0000877d  OS_T1                                                                        
+00008785  INTERNAL_OS_T1                                                               
+0000883d  ulPortGetIPSR                                                                
+00008855  xPortPendSVHandler                                                           
+000088b5  vPortSVCHandler                                                              
+000088d5  vPortStartFirstTask                                                          
+000088f9  vPortEnableVFP                                                               
+00008907  _system_post_cinit                                                           
+00008909  PORTF_Init                                                                   
+00008951  PORTF_SSR                                                                    
+00008973  PORTF_SSL                                                                    
+000089b9  __aeabi_memcpy                                                               
+000089b9  __aeabi_memcpy4                                                              
+000089b9  __aeabi_memcpy8                                                              
+000089b9  memcpy                                                                       
+00008a55  Delay_Us                                                                     
+00008a8f  Delay_ms                                                                     
+00008ad1  __aeabi_memclr                                                               
+00008ad1  __aeabi_memclr4                                                              
+00008ad1  __aeabi_memclr8                                                              
+00008ad3  __aeabi_memset                                                               
+00008ad3  __aeabi_memset4                                                              
+00008ad3  __aeabi_memset8                                                              
+00008ad9  memset                                                                       
+00008b4b  validateSignalID                                                             
+00008b65  power                                                                        
+00008bbd  Timer0A_Init                                                                 
+00008c03  Timer0A_Handler                                                              
+00008c2d  __TI_auto_init                                                               
+00008c9d  __TI_decompress_lzss                                                         
+00008d05  Rte_Read_LeftLevelReceiver_Left_Level_Heater                                 
+00008d13  Rte_Read_RightLevelReceiver_Right_Level_Interface                            
+00008d21  Rte_Write_StatusLeft_PassengerOnLeftSeat                                     
+00008d2f  Rte_Write_StatusRight_PassengerOnRightSeat                                   
+00008d3d  Rte_Read_SeatSensorLeft_SeatSensorRunnableLeft_SensorLeft_LeftSensorValue    
+00008d4d  Rte_Read_SeatSensorRight_SeatSensorRunnableRight_SensorRight_RightSensorValue
+00008d5d  _c_int00                                                                     
+00008db1  C$$EXIT                                                                      
+00008db5  abort                                                                        
+00008dbd  exit                                                                         
+00008e05  copy_in                                                                      
+00008e51  __aeabi_d2uiz                                                                
+00008e95  CPUcpsid                                                                     
+00008ea1  CPUprimask                                                                   
+00008eab  CPUcpsie                                                                     
+00008eb7  CPUwfi                                                                       
+00008ebb  CPUbasepriSet                                                                
+00008ec9  CPUbasepriGet                                                                
+00008ed5  InitGPIO                                                                     
+00008f05  _args_main                                                                   
+00008f1d  __aeabi_lmul                                                                 
+00008f35  SeatSensorRunnableLeft                                                       
+00008f49  SeatSensorRunnableRight                                                      
+00008f5d  _register_unlock                                                             
+00008f63  _register_lock                                                               
+00008f6b  _nop                                                                         
+00008f71  __TI_decompress_none                                                         
+00008f7f  __TI_zero_init                                                               
+00008f8b  ResetISR                                                                     
+00008f97  SysCtlDelay                                                                  
+00008f9d  _system_pre_init                                                             
+00009150  CanContainer                                                                 
+000092a4  MailboxCfg_MAP                                                               
+000096bc  ulMaxSyscallInterruptPriority                                                
+000096c0  CanTp_RxNSdu                                                                 
+000097ac  ComSignal                                                                    
+00009810  CanTp_TxNSdu                                                                 
+00009860  ComIPdu                                                                      
+000098b0  RTE_Event_SeatHeaterEvent                                                    
+000098b4  RTE_Event_SeatSensorLeftUpdateTimer                                          
+000098b8  RTE_Event_SeatSensorRightUpdateTimer                                         
+000098bc  BSW_Event_Com_MainFunctionRx                                                 
+000098c0  BSW_Event_Com_MainFunctionTx                                                 
+000098c4  BSW_Event_CanTp_MainFunction                                                 
+000098c8  T1                                                                           
+000098cc  RTE_Alarm_alarm1                                                             
+000098d0  RTE_Alarm_alarm2                                                             
+000098d4  RTE_Alarm_alarm3                                                             
+000098d8  BSW_Alarm_alarm4                                                             
+000098dc  BSW_Alarm_alarm5                                                             
+000098e0  BSW_Alarm_alarm6                                                             
+00009918  CanTp_Config                                                                 
+00009978  McuPerClockConfigData                                                        
+000099e0  ComConfiguration                                                             
+000099ec  ComIPduSignalRefs_Can_Message_1                                              
+000099f8  ComIPduSignalRefs_Can_Message_2                                              
+00009bd8  __TI_Handler_Table_Base                                                      
+00009be4  __TI_Handler_Table_Limit                                                     
+00009bf8  __TI_CINIT_Base                                                              
+00009c10  __TI_CINIT_Limit                                                             
+20000000  g_pfnRAMVectors                                                              
+20000270  AlarmStruct                                                                  
+20000390  CanTpRunTimeData                                                             
+200004a4  CanIf_rxPduConfigTypeInstance                                                
+20000544  CanIf_txPduConfigTypeInstance                                                
+200005e4  TaskStruct                                                                   
+20000688  CanIf_initConfigTypeInstance                                                 
+200006d0  CounterStruct                                                                
+2000070c  pxCurrentTCB                                                                 
+20000738  EventsInTask                                                                 
+20000758  real_CanIf                                                                   
+20000774  virtual_CanIf                                                                
+20000790  CanIfBufferCfgInstance                                                       
+200007a8  CanIfCtrlCfgInstance                                                         
+200007c0  real_com                                                                     
+200007d4  virtual_com                                                                  
+200007e8  CanIfHrhCfgInstance                                                          
+200007f8  CanIfHthCfgInstance                                                          
+20000808  CanIfInitHohCfgInstance                                                      
+20000818  Com_type                                                                     
+20000828  real_CanTp_rx                                                                
+20000838  virtual_CanTp_rx                                                             
+20000848  __TI_cleanup_ptr                                                             
+2000084c  __TI_dtors_ptr                                                               
+20000850  __TI_enable_exit_profile_output                                              
+20000854  ComAsuConfiguration                                                          
+20000860  _lock                                                                        
+20000864  _unlock                                                                      
+20000868  CanIf_configTypeInstance                                                     
+20000870  CanIf_hrhRangeConfigTypeInstance                                             
+20000880  real_CanTp_tx                                                                
+20000888  virtual_CanTp_tx                                                             
+20000890  try                                                                          
+20000897  leftsensor                                                                   
+20000898  s                                                                            
+2000089c  si                                                                           
+2000089d  su                                                                           
+2000089e  canif_Comfrimation_Value                                                     
+200008a2  canif_cantp_value                                                            
+200008a6  canif_ids                                                                    
+200008ac  main_func_sp                                                                 
+200008b3  cantp_cainf_FC                                                               
+200008b5  cantp_com_copy_tx                                                            
+200008b7  cantp_com_rx_or_copy                                                         
+200008b9  com_pdur                                                                     
+200008bd  rightsensor                                                                  
+200008be  canif_PduR_Value                                                             
+20000d28  Com_Asu_IPdu                                                                 
+20000d68  Message_Confirmation                                                         
+20000dc8  CounterList                                                                  
+20000ddc  DormantAlarmList                                                             
+20000e0c  ComIPduBuffer_2                                                              
+20000e14  CanIf_Global                                                                 
+20000e30  CanIfPrivateCfgInst                                                          
+20000e34  CanIfRxPduCfg_Arr                                                            
+20000e38  CanIf_ConfigPtr                                                              
+20000e3c  ComConfig                                                                    
+20000e40  ComIPduBuffer_1                                                              
+20000e44  ComSignalBuffer_1                                                            
+20000e48  ComSignalBuffer_2                                                            
+20000e4c  ComSignalBuffer_3                                                            
+20000e50  ComSignalBuffer_4                                                            
+20000e54  l                                                                            
+20000e58  controlleft                                                                  
+20000e59  controlright                                                                 
+20000e5c  __stack                                                                      
+2000105c  __STACK_END                                                                  
+2000105c  __STACK_TOP                                                                  
+ffffffff  __TI_pprof_out_hndl                                                          
+ffffffff  __TI_prof_data_size                                                          
+ffffffff  __TI_prof_data_start                                                         
+ffffffff  __binit__                                                                    
+ffffffff  __c_args__                                                                   
+ffffffff  binit                                                                        
+UNDEFED   SHT$$INIT_ARRAY$$Base                                                        
+UNDEFED   SHT$$INIT_ARRAY$$Limit                                                       
+
+[425 symbols]

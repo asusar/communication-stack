@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="CANIF_Test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/CANIF_Test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="AVECORE_CANIF.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="AVECORE_CANIF.h" />
+		<Unit filename="AVECORE_CanIf_Op_V1.5.exe.stackdump" />
+		<Unit filename="CANIF_Test.cbp" />
+		<Unit filename="CANIF_Test.layout" />
+		<Unit filename="Can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Can.h" />
+		<Unit filename="CanIf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CanIf.h" />
+		<Unit filename="CanIf_Cbk.h" />
+		<Unit filename="CanIf_Cfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CanIf_Cfg.h" />
+		<Unit filename="CanIf_ConfigTypes.h" />
+		<Unit filename="CanIf_Lcfg.h" />
+		<Unit filename="CanIf_Lcgf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CanIf_Sec_cfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CanIf_Sec_cfg.h" />
+		<Unit filename="CanIf_SpecialPdus.h" />
+		<Unit filename="CanIf_Types.h" />
+		<Unit filename="Can_Cfg.h" />
+		<Unit filename="Can_Lcfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ComStack_Types.h" />
+		<Unit filename="Compiler.h" />
+		<Unit filename="Compiler_Cfg.h" />
+		<Unit filename="Modules.h" />
+		<Unit filename="PduR.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PduR.h" />
+		<Unit filename="PduR_CanIf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PduR_CanIf.h" />
+		<Unit filename="PduR_Cfg.h" />
+		<Unit filename="PduR_Com.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PduR_Com.h" />
+		<Unit filename="PduR_If.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PduR_If.h" />
+		<Unit filename="PduR_PbCfg.h" />
+		<Unit filename="PduR_Types.h" />
+		<Unit filename="Platform_Types.h" />
+		<Unit filename="Std_Types.h" />
+		<Unit filename="debug.h" />
+		<Unit filename="irq_types.h" />
+		<Unit filename="txConfirmation_unitTest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="txConfirmation_unitTest.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

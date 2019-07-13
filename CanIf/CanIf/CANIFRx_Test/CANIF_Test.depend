@@ -1,0 +1,227 @@
+# depslib dependency file v1.0
+1556631239 source:g:\cse\canif_test\avecore_canif.c
+	<stdio.h>
+	<stdlib.h>
+	"CanIf.h"
+	"Can.h"
+	"CanIf_Cbk.h"
+	<string.h>
+	"debug.h"
+	"PduR.h"
+	"txConfirmation_unitTest.h"
+	"AVECORE_CANIF.h"
+
+1555676936 g:\cse\canif_test\canif.h
+	"Modules.h"
+	"PduR.h"
+	"Com.h"
+	"Det.h"
+	"CanIf_Types.h"
+	"CanIf_SpecialPdus.h"
+	"CanIf_Cfg.h"
+	"CanIf_ConfigTypes.h"
+
+1555676937 g:\cse\canif_test\modules.h
+	"Std_Types.h"
+
+1555676938 g:\cse\canif_test\std_types.h
+	"Platform_Types.h"
+	"Compiler.h"
+
+1555676938 g:\cse\canif_test\platform_types.h
+	<stdbool.h>
+	<stdint.h>
+
+1555676937 g:\cse\canif_test\compiler.h
+	"Compiler_Cfg.h"
+
+1555676937 g:\cse\canif_test\compiler_cfg.h
+
+1555676938 g:\cse\canif_test\pdur.h
+	"Modules.h"
+	"Modules.h"
+	"PduR_Cfg.h"
+	"PduR_Types.h"
+	"PduR_PbCfg.h"
+	"PduR_If.h"
+	"PduR_Com.h"
+	"PduR_CanIf.h"
+	"PduR_LinIf.h"
+	"PduR_CanTp.h"
+	"PduR_J1939Tp.h"
+	"PduR_Dcm.h"
+	"PduR_SoAd.h"
+	"PduR_J1939Tp.h"
+
+1555676938 g:\cse\canif_test\pdur_cfg.h
+
+1555676938 g:\cse\canif_test\pdur_types.h
+	"ComStack_Types.h"
+
+1555676937 g:\cse\canif_test\comstack_types.h
+	"Std_Types.h"
+
+1555676938 g:\cse\canif_test\pdur_pbcfg.h
+	"Dcm.h"
+	"Com.h"
+	"CanIf.h"
+	"CanTp.h"
+
+1555676938 g:\cse\canif_test\pdur_if.h
+	"PduR.h"
+	"Det.h"
+
+1555676938 g:\cse\canif_test\pdur_com.h
+	"PduR.h"
+
+1555676938 g:\cse\canif_test\pdur_canif.h
+	"PduR.h"
+
+1556320411 g:\cse\canif_test\canif_types.h
+	"ComStack_Types.h"
+
+1555676937 g:\cse\canif_test\canif_specialpdus.h
+
+1556325011 g:\cse\canif_test\canif_cfg.h
+	"Can.h"
+
+1556631774 g:\cse\canif_test\can.h
+	"Modules.h"
+	"Std_Types.h"
+	"CanIf_Types.h"
+	"ComStack_Types.h"
+	"Can_Cfg.h"
+	"Can_Cfg.h"
+
+1556631736 g:\cse\canif_test\can_cfg.h
+
+1555676937 g:\cse\canif_test\canif_configtypes.h
+
+1556631237 g:\cse\canif_test\canif_cbk.h
+	"CanIf_Cfg.h"
+
+1555676938 g:\cse\canif_test\debug.h
+	<stdio.h>
+
+1555676939 g:\cse\canif_test\txconfirmation_unittest.h
+
+1556318887 g:\cse\canif_test\avecore_canif.h
+
+1555676936 source:g:\cse\canif_test\can.c
+	"Can.h"
+	<stdio.h>
+
+1556324413 source:g:\cse\canif_test\can_lcfg.c
+	<stdlib.h>
+	"Can.h"
+	"CanIf_Cbk.h"
+	"irq_types.h"
+
+1555676939 g:\cse\canif_test\irq_types.h
+
+1556321020 source:g:\cse\canif_test\canif.c
+	"Det.h"
+	"CanIf.h"
+	"Can.h"
+	"CanIf_Cbk.h"
+	<string.h>
+	"debug.h"
+	"CanIf_Cfg.h"
+	"PduR.h"
+	"CanIf_Lcfg.h"
+	"CanIf_Sec_cfg.h"
+	"CanTp_Cbk.h"
+	"J1939Tp_Cbk.h"
+	"CanNm.h"
+	"PduR_CanIf.h"
+	"CanNm.h"
+	"CanTp.h"
+	"PduR_Cbk.h"
+	"CanNm_Cbk.h"
+	"CanTp_Cbk.h"
+
+1555676937 g:\cse\canif_test\canif_lcfg.h
+	"CanIf.h"
+	"CanTp.h"
+	"CanTp_Cbk.h"
+	"J1939Tp.h"
+	"J1939Tp_Cbk.h"
+	"PduR.h"
+	"PduR_CanIf.h"
+	"PduR_PbCfg.h"
+	"CanNm_Cbk.h"
+	<stdlib.h>
+	"Can_Cfg.h"
+	"AVECORE_CANIF.h"
+
+1555676937 g:\cse\canif_test\canif_sec_cfg.h
+
+1556319150 source:g:\cse\canif_test\canif_cfg.c
+	"CanIf.h"
+	"CanTp.h"
+	"CanTp_Cbk.h"
+	"J1939Tp.h"
+	"J1939Tp_Cbk.h"
+	"PduR.h"
+	"PduR_CanIf.h"
+	"PduR_PbCfg.h"
+	"CanNm_Cbk.h"
+	<stdlib.h>
+	"Can_Cfg.h"
+
+1555686756 source:g:\cse\canif_test\canif_lcgf.c
+	"CanIf.h"
+	"CanTp.h"
+	"CanTp_Cbk.h"
+	"J1939Tp.h"
+	"J1939Tp_Cbk.h"
+	"PduR.h"
+	"PduR_CanIf.h"
+	"PduR_PbCfg.h"
+	"CanNm_Cbk.h"
+	<stdlib.h>
+	"Can_Cfg.h"
+	"AVECORE_CANIF.h"
+
+1556319555 source:g:\cse\canif_test\canif_sec_cfg.c
+	"CanIf.h"
+	"CanTp.h"
+	"CanTp_Cbk.h"
+	"J1939Tp.h"
+	"J1939Tp_Cbk.h"
+	"PduR.h"
+	"PduR_CanIf.h"
+	"PduR_PbCfg.h"
+	"CanNm_Cbk.h"
+	<stdlib.h>
+	"Can_Cfg.h"
+	"AVECORE_CANIF.h"
+
+1555677281 source:g:\cse\canif_test\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Can.h"
+	"CanIf.h"
+	"CanIf_Cbk.h"
+	"CanIf_Cfg.h"
+	"CanIf_Lcfg.h"
+
+1555676938 source:g:\cse\canif_test\pdur.c
+	"PduR.h"
+
+1555678944 source:g:\cse\canif_test\pdur_canif.c
+	"PduR_CanIf.h"
+	"CanIf.h"
+	"txConfirmation_unitTest.h"
+
+1555676938 source:g:\cse\canif_test\pdur_com.c
+	"PduR_Com.h"
+
+1555676938 source:g:\cse\canif_test\pdur_if.c
+	"PduR_If.h"
+
+1555676939 source:g:\cse\canif_test\txconfirmation_unittest.c
+	"CanIf.h"
+	"CanIf_Cbk.h"
+	"stdio.h"
+
