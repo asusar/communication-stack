@@ -13,8 +13,9 @@
  - [What is AUTOSAR?](#what-is-autosar)
  - [AUTOSAR Communication Stack](autosar-communication-stack)
  - [Project Description](#project-description)
- - [AUTOSAR Modules Implementation](#autosar-interfaces-implementation)
- - [AUTOSAR Tools](#autosar-tools)
+ - [Project Supervisors](#project-supervisors)
+ - [License](#license)
+
 </details>
 
 # What is AUTOSAR?
@@ -69,4 +70,14 @@ We implement a lot of Autosar interfaces in the following Modules :
   - Seat Heater Application on more than one ECU (TM4C123 Board)
       - We are integrating all AUTOSAR Modules implementation and our configuration tools to make a working application
       
+# Project Supervisors
 
+  - **Dr.Sherif Hammad** 
+    * Email: sherif.hammad@eng.asu.edu.eg
+  - **Eng.Mohamed Abdelhay**
+    * Email: mhmd.a.elhay@gmail.com
+
+# License
+
+Copyright © 2019, [Faculty of Engineering Ain Shams University](https://eng.asu.edu.eg/).
+Released under the [apache license v2.0](LICENSE).
