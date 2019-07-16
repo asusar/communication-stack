@@ -1,0 +1,62 @@
+	<!--Set Triggered Event Modal-->
+	<div class="modal fade" id="setTriggeredEventModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h3 class="modal-title text-primary">
+	        	Set Trigger Event Properties
+	        </h3>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body pre-scrollable">
+	        <div class="row" >
+							<div class="col-lg-9">
+								<div class="col-lg-9" id="Event_form" >
+									<form>
+										<div class="form-group">
+											<label for="exampleInputEmail1">Event Name</label>
+											<input type="text" class="form-control" id="InputEventName" aria-describedby="emailHelp" placeholder="Enter event name">
+											</div>
+										<div class="form-group">
+											<label for="exampleInputEmail1">Event Types</label>
+										<select class="form-control" id="InputEventType" onchange="EventSelectChange()">
+										</select>											
+										</div>											
+										<div class="form-group" id="Timing_Event_Form" style="display: none;">
+											<label for="exampleInputPassword1">Period</label>
+											<input type="number" step="0.01" class="form-control" id="InputTimingEventPeriod" placeholder="Enter Periodicity">
+										</div>
+										<div id="Data_Received_Form" style="display: none;">
+											<div class="form-group">
+												<label for="exampleInputPassword1">R Port Prototype</label>
+										<select class="form-control" id="InputEventRport" onchange="EventRportSelectChange()">
+										</select>												</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">Variable Data Prototype</label>
+										<select class="form-control" id="InputEventDataElement">
+										</select>												</div>
+										</div>
+										<div id="Operation_Invoked_Form" style="display: none;">
+											<div class="form-group">
+												<label for="exampleInputPassword1">P Port Prototype</label>
+										<select class="form-control" id="InputEventPport" onchange="EventPportSelectChange()">
+										</select>												</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">Operation Prototype</label>
+										<select class="form-control" id="InputEventOperation">
+										</select>												</div>
+										</div>
+									</form>
+								</div>
+							</div>
+			  	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-success event-save-changes">Save Trigger Event</button>
+	      </div>
+	    </div>
+		</div>
+	</div>	

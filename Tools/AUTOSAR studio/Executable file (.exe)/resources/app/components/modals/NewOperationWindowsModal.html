@@ -1,0 +1,51 @@
+	<!--New Operation Modal-->
+	<div class="modal fade" id="NewOperationWindowsModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog " role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">New Operation</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-12">
+							<div class="items">
+								<div class="form-group" id="wholeargumentform">
+									<div class="form-group"  >
+								 <label>Operation name </label>
+									<input type="text" class="form-control" name="operation_name" id="operation_name" > <br>
+
+								<button class="btn btn-outline-primary" id="addArgumentid" topMargin="2" >add Argument</button>
+								<button class="btn btn-outline-primary" id="addErrorid" leftMargin="2" topMargin="2">choose Error Codes</button><br>
+
+							<div class="form-group" style="display:none"  id="argumentform" >
+								<label>Argument name </label>
+									<input type="text" class="form-control" name="argument_name" id="argument_name">
+								</div>
+							 <div class="form-group" style="display:none"  id="errorform" >
+
+								</div>
+								</div>
+
+					<div class="form-group" id="argumentformsaveclose" style="display:none">
+					 <button class="btn btn-outline-primary" id="closeargument" >close</button>
+					<button class="btn btn-outline-primary" id="saveargument" >save argument</button><br>
+							</div>
+					<div class="form-group" id="errorformsaveclose" style="display:none">
+					 <button class="btn btn-outline-primary" id="closeerror" >close</button>
+					<button class="btn btn-outline-primary" id="saveerror" >save error code </button><br>
+							</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-success save-operation">Save Operation</button>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,64 @@
+	<!-- New Port Module-->
+	<div class="modal fade" id="newPortModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Add new Port </h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row">
+			  		<div class="col-12">
+			  			<div class="items">
+			  				<div class="form-group">
+							    <label><b>Port name</b></label>
+							    <input type="text" class="form-control" id="port_name" name="port_name">
+							    <div class="radio" style="margin-top: 30px">
+							 	<label><b>Port type</b></label>
+								  <br>
+								 <!-- <label style="margin-right: 50px;background-color: #66bb6a;"><input type="radio" id="sender_port" name="port_type" checked> Sender</label>
+								  <label style="background-color: #90caf9;"><input type="radio" id="reciever_port" name="port_type"> Reciever</label>
+								  	<br>
+								  <label style="margin-right: 55px;background-color: #d4e157;"><input type="radio" id="client_port" name="port_type" > Server   </label>
+								  <label style="background-color: #f44336;"><input type="radio" id="server_port" name="port_type"> Client</label>
+								  <br>-->
+								<div class="custom-control custom-radio custom-control-inline">
+								  <input type="radio" id="p_port" name="portType" class="custom-control-input"checked>
+								  <label class="custom-control-label" for="p_port">P Port</label>
+								</div>
+								<div class="custom-control custom-radio custom-control-inline">
+								  <input type="radio" id="r_port" name="portType" class="custom-control-input">
+								  <label class="custom-control-label" for="r_port">R Port</label>
+								</div>
+								<br>
+								<label>Port Interface : </label> 
+								  	<select class="form-control" id="newPortInterfaceSelect">
+								  	</select>	
+								<br>
+								<label><b>Port Position</b></label>
+								<br>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="left" name="portPosition" class="custom-control-input" checked>
+									<label class="custom-control-label" for="left">Position Left</label>
+								</div>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="right" name="portPosition" class="custom-control-input">
+									<label class="custom-control-label" for="right">Position Right</label>
+								</div>
+								
+								  
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			 <button type="button" class="btn btn-success save-port">Save Port</button>
+				</div>
+			</div>
+		</div>
+	</div>

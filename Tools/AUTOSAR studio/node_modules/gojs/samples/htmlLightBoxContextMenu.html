@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LightBox Style HTML Custom Context Menu</title>
+<meta name="description" content="Demonstrate context menus implemented in HTML covering the whole window." />
+<!-- Copyright 1998-2018 by Northwoods Software Corporation. -->
+<meta charset="UTF-8">
+
+<script src="../release/go.js"></script>
+
+<link rel='stylesheet' href='../extensions/LightBoxContextMenu.css' />
+<script src="../extensions/LightBoxContextMenu.js"></script>
+
+<script src="../assets/js/goSamples.js"></script>  <!-- this is only for the GoJS Samples framework -->
+
+<script id="code">
+
+var myDiagram = null;
+
+function init() {
+  if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
+  var $ = go.GraphObject.make;  // for conciseness in defining templates
+
+  // Initialize the Diagram
+  myDiagram =
+    $(go.Diagram, "myDiagramDiv",  // create a Diagram for the DIV HTML element
+      { initialContentAlignment: go.Spot.Center, "undoManager.isEnabled": true });
+  // define a simple Node template (but use the default Link template)
+  myDiagram.nodeTemplate =
+      $(go.Node, "Auto",
+        { contextMenu: window.myHTMLLightBox }, // window.myHTMLLightBox is defined in extensions/LightBoxContextMenu.js
+        $(go.Shape, "RoundedRectangle", { strokeWidth: 0},
+          // Shape.fill is bound to Node.data.color
+          new go.Binding("fill", "color")),
+        $(go.TextBlock,
+          { margin: 8 },  // some room around the text
+          // TextBlock.text is bound to Node.data.key
+          new go.Binding("text", "key"))
+      );
+
+  // create the model data that will be represented by Nodes and Links
+  myDiagram.model = new go.GraphLinksModel(
+  [
+    { key: "Alpha", color: "lightblue" },
+    { key: "Beta", color: "orange" },
+    { key: "Gamma", color: "lightgreen" },
+    { key: "Delta", color: "pink" }
+  ],
+  [
+    { from: "Alpha", to: "Beta" },
+    { from: "Alpha", to: "Gamma" },
+    { from: "Beta", to: "Beta" },
+    { from: "Gamma", to: "Delta" },
+    { from: "Delta", to: "Alpha" }
+  ]);
+
+  myDiagram.contextMenu = window.myHTMLLightBox; // window.myHTMLLightBox is defined in extensions/lightbox.js
+
+} // end init
+
+</script>
+</head>
+<body onload="init()">
+  <div id="sample">
+    <p>LightBox-style context menu <b>GoJS</b> Sample</p>
+
+    <div style="display: inline-block;">
+      <div style="position: relative">
+        <div id="myDiagramDiv" style="border: solid 1px black; width:400px; height:400px"></div>
+      </div>
+      <div id="description">
+        <p>
+          This demonstrates the implementation of a custom HTML context menu using <a>HTMLInfo</a>.
+          This sample is also a re-implementation of the built-in <a>ContextMenuTool.defaultTouchContextMenu</a>.
+        </p>
+
+        <p>The implementation is contained in the files <a href="../extensions/LightBoxContextMenu.js">LightBoxContextMenu.js</a> and <a href="../extensions/LightBoxContextMenu.css">LightBoxContextMenu.css</a>. The JavaScript file exposes <code>window.myHTMLLightBox</code>, which is used in this file as the value of <code>myDiagram.contextMenu</code>.
+
+        <p>For a more regular HTML context menu implementation, see the <a href="customContextMenu.html">Custom Context Menu</a> sample.</p>
+        <p>Right-click or tap-hold (mobile) on a Node to bring up a context menu.
+           If you have a selection copied in the clipboard,
+           you can bring up a context menu anywhere to paste.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+	<!--Client And Servers Interface Modal-->
+	<div class="modal fade" id="AddClientServerInterfacesWindowsModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Add Client-Server Interface</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body pre-scrollable">
+	        <div class="row">
+			  		<div class="col-12">
+			  			<div class="col-12" id="wholeclientserverwindow">
+			  				<div class="form-group">
+							 	<label>Interface name</label>
+							    <input type="text" class="form-control" name="clientserver_name"id="clientserver_name">
+							  </div>
+							  <button class="btn btn-outline-primary" id="addOperationid" >add Operation</button>
+							  <button class="btn btn-outline-primary" id="addPossibleErrorid" leftMargin="2" topMargin="2">add Possible Error Code</button><br><br>
+                              <div class="form-group" style="display:none"  id="possibleerrorform" >
+
+								<label>Error name </label>
+									<input type="text" class="form-control" name="error_name" id="error_name">
+								<label>Error code number</label>
+									<input type="number" class="form-control" name="error_code"id="error_code">
+								</div>
+								<br>
+					<div class="form-group" id="possibleerrorformsaveclose" style="display:none">
+					 <button class="btn btn-outline-primary" id="closepossibleerror" >close</button>
+					<button class="btn btn-outline-primary" id="savepossibleerror" >save error code </button><br>
+								</div><br>
+									<div class="form-group" style="display:none"  id="operationform" >
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success save-clientserver">Save Interface</button>
+				</div>
+			</div>
+		</div>
+	</div>

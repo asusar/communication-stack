@@ -1,0 +1,152 @@
+	<!-- Start Properties Modal -->
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" id="PropModal" role="dialog" aria-hidden="true">
+		<div class="modal-dialog propModal" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Software Component Properties</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-6"><button type="button" class="btn btn-outline-primary" style="width:100%;border-radius: 0px;" id="Ports_Button">Ports</button></div>
+						<div class="col-lg-6"><button type="button" class="btn btn-outline-danger" style="width:100%;border-radius: 0px;"  id="Runnables_Button">Runnables</button></div>
+					</div>
+					<br>
+					<div class="Runnable_Properties" id="Runnable_Properties">
+						<!--<div class="alert alert-danger" role="alert">
+							You can add more than one runnable for the same type For Examlpe you can make 3 Data Received Runnables
+						</div>-->
+						<div class="row">
+							<div class="col-lg-3">
+								<button type="button" class="btn btn-success create-runnable">
+									<i class="fa fa-plus-circle"></i> Add Runnable </button>
+								<br><br>
+							</div>
+							<div class="col-lg-2">
+							<button type="button" class="btn btn-danger delete-runnable"><i class="fa fa-minus-circle">
+								</i> Delete Runnable </button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-3">
+								<h4 class ="text-primary">Created Runnables</h4>
+								<div id="createdRunnables" class="pre-scrollable">
+								</div>
+							</div>
+							<div class="col-lg-9 pre-scrollable"  id="Runnable_form" style="display:none">
+								<h4><span id="RunnableUpdateName">Runnables </span> Runnable Properties</h4>
+								<form>
+									<div class="form-group" >
+										<label>Runnable Name</label>
+										<input type="text" class="form-control" id="runnable-short-name-input"  placeholder="Enter Runnable short-name">
+										<small class="form-text text-muted">You Should Enter a Unique Short name</small>
+									</div>
+									<div class="form-group" >
+										<label>Minimum start interval</label>
+										<input type="number" step="0.01" class="form-control" id="Minimum_start_interval" aria-describedby="emailHelp" placeholder="Enter Runnable Minimum start interval">
+										<small id="inpurShortnameHelp" class="form-text text-muted">You Should Enter a float value</small>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" style="margin-right: 10px" id="invoked" value="">Invoked Concurrently
+									</div>
+									<div class="form-group">
+										<button type="button" class="btn btn-outline-primary addDataAccessButton" id="addDataAccessButton"  >Add Data Access</button>
+										<button type="button" class="btn btn-outline-primary Events_Button" id="Events_Button">Set Trigger Event</button>
+									</div>
+									<button type="button" class="btn btn-outline-primary save-runnable-changes">Save changes</button>
+
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="Ports_Properties" id="Ports_Properties">
+						<div class="row">
+							<div class="col-lg-3" id="ports_main_details">
+								<h4>SWc Ports</h4>
+								<br>
+								<div id="chPorts">
+								</div>
+							</div>
+							<div class="col-lg-9" id="Ports_Info">
+								<h4><span id="PortUpdateName">Ports </span>Requirements</h4>
+								<br>
+								<form id="Ports_Info_Form_SenderServer">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Port Name</label>
+										<input type="text" class="form-control InputPortShortName" aria-describedby="emailHelp" placeholder="Enter Port short-name">
+										<small id="inpurShortnameHelp" class="form-text text-muted">You Should Enter a Unique Short name</small>
+									</div>
+									<div class="form-group">
+										<label for="PortInterFaceSelect">Port Interface</label>
+										<select class="form-control" id="PortInterFaceSelect" disabled="true">
+										</select>
+									</div>
+									<div id="DataElement">
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="list-group " id="DEname"></div>
+											</div>
+											<div class="col-lg-6">
+												<div class="list-group" id="DEvalue"></div>
+											</div>
+										</div>
+									</div>
+									<br>
+									<button type="button" class="btn btn-outline-primary" id="Single_Port1_Submittion">Save changes</button>
+								</form>
+
+								<form id="Ports_Info_Form_ReceiverClient">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Port Name</label>
+										<input type="text" class="form-control InputPortShortName" aria-describedby="emailHelp" placeholder="Enter Port short-name">
+										<small id="inpurShortnameHelp" class="form-text text-muted">You Should Enter a Unique Short name</small>
+									</div>
+									<div class="form-group">
+										<label for="PortInterFaceSelect">Port Interface</label>
+										<select class="form-control" id="CSPortInterFaceSelect" disabled="true">
+										</select>
+									</div>
+									<div id="OperationElement">
+										<div class="single_op">
+											<div class="row">
+													<div class="col-lg-4">
+														<div class="list-group" id="op_names_list">
+															<a href="#" class="list-group-item list-group-item-action active">
+																Op Name
+															</a>
+														</div>
+													</div>
+													<div class="col-lg-4">
+														<div class="list-group" id="op_arg_DE_type">
+															<a href="#" class="list-group-item list-group-item-action active">
+																Arg name
+															</a>
+														</div>
+													</div>
+													<div class="col-lg-4">
+														<div class="list-group" id="op_arg_DE_name">
+															<a href="#" class="list-group-item list-group-item-action active">
+																Arg Type
+															</a>
+														</div>
+													</div>
+											</div>
+										</div>
+									</div>
+									<br>
+									<button type="button" class="btn btn-outline-primary" id="Single_Port2_Submittion">Save changes</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary properties-save-button">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Properties Modal -->

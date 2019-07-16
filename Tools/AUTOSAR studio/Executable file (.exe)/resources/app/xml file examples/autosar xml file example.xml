@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/2.1.2">
+    <TOP-LEVEL-PACKAGES>
+
+        <AR-PACKAGE>
+            <SHORT-NAME>types</SHORT-NAME>
+            <ELEMENTS>
+                <INTEGER-TYPE>
+                    <SHORT-NAME>Int16</SHORT-NAME>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                </INTEGER-TYPE>
+                <STRING-TYPE>
+                    <SHORT-NAME>String8</SHORT-NAME>
+                    <ENCODING>utf8</ENCODING>
+                    <MAX-NUMBER-OF-CHARS>8</MAX-NUMBER-OF-CHARS>
+                </STRING-TYPE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+
+        <AR-PACKAGE>
+            <SHORT-NAME>interfaces</SHORT-NAME>
+            <ELEMENTS>
+                <SENDER-RECEIVER-INTERFACE>
+                    <SHORT-NAME>SR Int16</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <DATA-ELEMENT-PROTOTYPE>
+                            <SHORT-NAME>intValue1</SHORT-NAME>
+                            <TYPE-TREF DEST="INTEGER-TYPE">/types/Int16</TYPE-TREF>
+                            <IS-QUEUED>false</IS-QUEUED>
+                        </DATA-ELEMENT-PROTOTYPE>
+                        <DATA-ELEMENT-PROTOTYPE>
+                            <SHORT-NAME>intValue2</SHORT-NAME>
+                            <TYPE-TREF DEST="INTEGER-TYPE">/types/Int16</TYPE-TREF>
+                            <IS-QUEUED>false</IS-QUEUED>
+                        </DATA-ELEMENT-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                </SENDER-RECEIVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE>
+                    <SHORT-NAME>CS string to int</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <OPERATIONS>
+                        <OPERATION-PROTOTYPE>
+                            <SHORT-NAME>parse</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-PROTOTYPE>
+                                    <SHORT-NAME>string</SHORT-NAME>
+                                    <TYPE-TREF DEST="ARRAY-TYPE">/types/String8</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-PROTOTYPE>
+                                <ARGUMENT-PROTOTYPE>
+                                    <SHORT-NAME>value</SHORT-NAME>
+                                    <TYPE-TREF DEST="INTEGER-TYPE">/types/Int16</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-PROTOTYPE>
+                            </ARGUMENTS>
+                            <POSSIBLE-ERROR-REFS>
+                                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">
+                                    /interfaces/CS string to int/overflow
+                                </POSSIBLE-ERROR-REF>
+                                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">
+                                    /interfaces/CS string to int/underflow
+                                </POSSIBLE-ERROR-REF>
+                            </POSSIBLE-ERROR-REFS>
+                        </OPERATION-PROTOTYPE>
+                    </OPERATIONS>
+                    <POSSIBLE-ERRORS>
+                        <APPLICATION-ERROR>
+                            <SHORT-NAME>overflow</SHORT-NAME>
+                            <ERROR-CODE>42</ERROR-CODE>
+                        </APPLICATION-ERROR>
+                        <APPLICATION-ERROR>
+                            <SHORT-NAME>underflow</SHORT-NAME>
+                            <ERROR-CODE>43</ERROR-CODE>
+                        </APPLICATION-ERROR>
+                    </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+
+        <AR-PACKAGE>
+            <SHORT-NAME>swc root</SHORT-NAME>
+            <ELEMENTS>
+                <ATOMIC-SOFTWARE-COMPONENT-TYPE>
+                    <SHORT-NAME>swc1</SHORT-NAME>
+                    <PORTS>
+                        <P-PORT-PROTOTYPE>
+                            <SHORT-NAME>pport1</SHORT-NAME>
+                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">
+                                /interfaces/SR Int16
+                            </PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE>
+                            <SHORT-NAME>rport1</SHORT-NAME>
+                            <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">
+                                /interfaces/CS string to int
+                            </REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                    </PORTS>
+                </ATOMIC-SOFTWARE-COMPONENT-TYPE>
+                <ATOMIC-SOFTWARE-COMPONENT-TYPE>
+                    <SHORT-NAME>swc2</SHORT-NAME>
+                    <PORTS>
+                        <P-PORT-PROTOTYPE>
+                            <SHORT-NAME>pport1</SHORT-NAME>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">
+                                /interfaces/CS string to int
+                            </PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE>
+                            <SHORT-NAME>rport1</SHORT-NAME>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">
+                                /interfaces/SR Int16
+                            </REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                    </PORTS>
+                </ATOMIC-SOFTWARE-COMPONENT-TYPE>
+                <INTERNAL-BEHAVIOR>
+                    <SHORT-NAME>intBehSwc1</SHORT-NAME>
+                    <COMPONENT-REF DEST="ATOMIC-SOFTWARE-COMPONENT-TYPE">/swc root/swc1</COMPONENT-REF>
+                    <EVENTS>
+                        <TIMING-EVENT>
+                            <SHORT-NAME>Time100ms</SHORT-NAME>
+                            <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">
+                                /swc root/intBehSwc1/run11
+                            </START-ON-EVENT-REF>
+                            <PERIOD>0.1</PERIOD>
+                        </TIMING-EVENT>
+                        <TIMING-EVENT>
+                            <SHORT-NAME>Time50ms</SHORT-NAME>
+                            <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">
+                                /swc root/intBehSwc1/run12
+                            </START-ON-EVENT-REF>
+                            <PERIOD>0.05</PERIOD>
+                        </TIMING-EVENT>
+                    </EVENTS>
+                    <RUNNABLES>
+                        <RUNNABLE-ENTITY>
+                            <SHORT-NAME>run11</SHORT-NAME>
+                            <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                            <DATA-SEND-POINTS>
+                                <DATA-SEND-POINT>
+                                    <SHORT-NAME>dwa1</SHORT-NAME>
+                                    <DATA-ELEMENT-IREF>
+                                        <P-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">
+                                            /swc root/swc1/pport1
+                                        </P-PORT-PROTOTYPE-REF>
+                                        <DATA-ELEMENT-PROTOTYPE-REF DEST="DATA-ELEMENT-PROTOTYPE">
+                                            /interfaces/SR Int16/intValue1
+                                        </DATA-ELEMENT-PROTOTYPE-REF>
+                                    </DATA-ELEMENT-IREF>
+                                </DATA-SEND-POINT>
+                                <DATA-SEND-POINT>
+                                    <SHORT-NAME>dwa2</SHORT-NAME>
+                                    <DATA-ELEMENT-IREF>
+                                        <P-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">
+                                            /swc root/swc1/pport1
+                                        </P-PORT-PROTOTYPE-REF>
+                                        <DATA-ELEMENT-PROTOTYPE-REF DEST="DATA-ELEMENT-PROTOTYPE">
+                                            /interfaces/SR Int16/intValue2
+                                        </DATA-ELEMENT-PROTOTYPE-REF>
+                                    </DATA-ELEMENT-IREF>
+                                </DATA-SEND-POINT>
+                            </DATA-SEND-POINTS>
+                            <SYMBOL>run11</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY>
+                            <SHORT-NAME>run12</SHORT-NAME>
+                            <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                            <DATA-SEND-POINTS>
+                                <DATA-SEND-POINT>
+                                    <SHORT-NAME>dwa2</SHORT-NAME>
+                                    <DATA-ELEMENT-IREF>
+                                        <P-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">
+                                            /swc root/swc1/pport1
+                                        </P-PORT-PROTOTYPE-REF>
+                                        <DATA-ELEMENT-PROTOTYPE-REF DEST="DATA-ELEMENT-PROTOTYPE">
+                                            /interfaces/SR Int16/intValue1
+                                        </DATA-ELEMENT-PROTOTYPE-REF>
+                                    </DATA-ELEMENT-IREF>
+                                </DATA-SEND-POINT>
+                            </DATA-SEND-POINTS>
+                            <SERVER-CALL-POINTS>
+                                <SYNCHRONOUS-SERVER-CALL-POINT>
+                                    <SHORT-NAME>sscp</SHORT-NAME>
+                                    <OPERATION-IREFS>
+                                        <OPERATION-IREF>
+                                            <R-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">
+                                                /swc root/swc1/rport1
+                                            </R-PORT-PROTOTYPE-REF>
+                                            <OPERATION-PROTOTYPE-REF DEST="OPERATION-PROTOTYPE">
+                                                /interfaces/CS string to int/parse
+                                            </OPERATION-PROTOTYPE-REF>
+                                        </OPERATION-IREF>
+                                    </OPERATION-IREFS>
+                                </SYNCHRONOUS-SERVER-CALL-POINT>
+                            </SERVER-CALL-POINTS>
+                            <SYMBOL>run12</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                    </RUNNABLES>
+                    <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </INTERNAL-BEHAVIOR>
+                <INTERNAL-BEHAVIOR>
+                    <SHORT-NAME>intBehSwc2</SHORT-NAME>
+                    <COMPONENT-REF DEST="ATOMIC-SOFTWARE-COMPONENT-TYPE">/swc root/swc2</COMPONENT-REF>
+                    <EVENTS>
+                        <TIMING-EVENT>
+                            <SHORT-NAME>Time50ms</SHORT-NAME>
+                            <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">
+                                /swc root/intBehSwc2/run22
+                            </START-ON-EVENT-REF>
+                            <PERIOD>0.05</PERIOD>
+                        </TIMING-EVENT>
+                        <OPERATION-INVOKED-EVENT>
+                            <SHORT-NAME>operationInvoke</SHORT-NAME>
+                            <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">
+                                /swc root/intBehSwc2/run21
+                            </START-ON-EVENT-REF>
+                            <OPERATION-IREF>
+                                <P-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">
+                                    /swc root/swc2/pport1
+                                </P-PORT-PROTOTYPE-REF>
+                                <OPERATION-PROTOTYPE-REF DEST="OPERATION-PROTOTYPE">
+                                    /interfaces/CS string to int/parse
+                                </OPERATION-PROTOTYPE-REF>
+                            </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                    </EVENTS>
+                    <RUNNABLES>
+                        <RUNNABLE-ENTITY>
+                            <SHORT-NAME>run21</SHORT-NAME>
+                            <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                            <SYMBOL>run21</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY>
+                            <SHORT-NAME>run22</SHORT-NAME>
+                            <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                            <DATA-RECEIVE-POINTS>
+                                <DATA-RECEIVE-POINT>
+                                    <SHORT-NAME>dra1</SHORT-NAME>
+                                    <DATA-ELEMENT-IREF>
+                                        <R-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">
+                                            /swc root/swc2/rport1
+                                        </R-PORT-PROTOTYPE-REF>
+                                        <DATA-ELEMENT-PROTOTYPE-REF DEST="DATA-ELEMENT-PROTOTYPE">
+                                            /interfaces/SR Int16/intValue1
+                                        </DATA-ELEMENT-PROTOTYPE-REF>
+                                    </DATA-ELEMENT-IREF>
+                                </DATA-RECEIVE-POINT>
+                                <DATA-RECEIVE-POINT>
+                                    <SHORT-NAME>dra2</SHORT-NAME>
+                                    <DATA-ELEMENT-IREF>
+                                        <R-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">
+                                            /swc root/swc2/rport1
+                                        </R-PORT-PROTOTYPE-REF>
+                                        <DATA-ELEMENT-PROTOTYPE-REF DEST="DATA-ELEMENT-PROTOTYPE">
+                                            /interfaces/SR Int16/intValue2
+                                        </DATA-ELEMENT-PROTOTYPE-REF>
+                                    </DATA-ELEMENT-IREF>
+                                </DATA-RECEIVE-POINT>
+                            </DATA-RECEIVE-POINTS>
+                            <SYMBOL>run22</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                    </RUNNABLES>
+                    <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </INTERNAL-BEHAVIOR>
+                <IMPLEMENTATION>
+                    <SHORT-NAME>implSwc1</SHORT-NAME>
+                    <BEHAVIOR-REF DEST="INTERNAL-BEHAVIOR">/swc root/intBehSwc1</BEHAVIOR-REF>
+                    <CODE-DESCRIPTOR>
+                        <SHORT-NAME>src</SHORT-NAME>
+                        <TYPE>SRC</TYPE>
+                    </CODE-DESCRIPTOR>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                </IMPLEMENTATION>
+                <IMPLEMENTATION>
+                    <SHORT-NAME>implSwc2</SHORT-NAME>
+                    <BEHAVIOR-REF DEST="INTERNAL-BEHAVIOR">/swc root/intBehSwc2</BEHAVIOR-REF>
+                    <CODE-DESCRIPTOR>
+                        <SHORT-NAME>src</SHORT-NAME>
+                        <TYPE>SRC</TYPE>
+                    </CODE-DESCRIPTOR>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                </IMPLEMENTATION>
+            </ELEMENTS>
+        </AR-PACKAGE>
+
+        <AR-PACKAGE>
+            <SHORT-NAME>comp root</SHORT-NAME>
+            <ELEMENTS>
+                <COMPOSITION-TYPE>
+                    <SHORT-NAME>comp</SHORT-NAME>
+                    <PORTS />
+                    <COMPONENTS>
+                        <COMPONENT-PROTOTYPE>
+                            <SHORT-NAME>swc1</SHORT-NAME>
+                            <TYPE-TREF DEST="ATOMIC-SOFTWARE-COMPONENT-TYPE">/swc root/swc1</TYPE-TREF>
+                        </COMPONENT-PROTOTYPE>
+                        <COMPONENT-PROTOTYPE>
+                            <SHORT-NAME>swc2</SHORT-NAME>
+                            <TYPE-TREF DEST="ATOMIC-SOFTWARE-COMPONENT-TYPE">/swc root/swc2</TYPE-TREF>
+                        </COMPONENT-PROTOTYPE>
+                    </COMPONENTS>
+                    <CONNECTORS>
+                        <ASSEMBLY-CONNECTOR-PROTOTYPE>
+                            <SHORT-NAME>ac1 swc1pport1swc2rport1</SHORT-NAME>
+                            <PROVIDER-IREF>
+                                <COMPONENT-PROTOTYPE-REF DEST="COMPONENT-PROTOTYPE">
+                                    /comp root/comp/swc1
+                                </COMPONENT-PROTOTYPE-REF>
+                                <P-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">
+                                    /swc root/swc1/pport1
+                                </P-PORT-PROTOTYPE-REF>
+                            </PROVIDER-IREF>
+                            <REQUESTER-IREF>
+                                <COMPONENT-PROTOTYPE-REF DEST="COMPONENT-PROTOTYPE">
+                                    /comp root/comp/swc2
+                                </COMPONENT-PROTOTYPE-REF>
+                                <R-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">
+                                    /swc root/swc2/rport1
+                                </R-PORT-PROTOTYPE-REF>
+                            </REQUESTER-IREF>
+                        </ASSEMBLY-CONNECTOR-PROTOTYPE>
+                        <ASSEMBLY-CONNECTOR-PROTOTYPE>
+                            <SHORT-NAME>ac2 swc2pport1swc1rport1</SHORT-NAME>
+                            <PROVIDER-IREF>
+                                <COMPONENT-PROTOTYPE-REF DEST="COMPONENT-PROTOTYPE">
+                                    /comp root/comp/swc2
+                                </COMPONENT-PROTOTYPE-REF>
+                                <P-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">
+                                    /swc root/swc2/pport1
+                                </P-PORT-PROTOTYPE-REF>
+                            </PROVIDER-IREF>
+                            <REQUESTER-IREF>
+                                <COMPONENT-PROTOTYPE-REF DEST="COMPONENT-PROTOTYPE">
+                                    /comp root/comp/swc1
+                                </COMPONENT-PROTOTYPE-REF>
+                                <R-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">
+                                    /swc root/swc1/rport1
+                                </R-PORT-PROTOTYPE-REF>
+                            </REQUESTER-IREF>
+                        </ASSEMBLY-CONNECTOR-PROTOTYPE>
+                    </CONNECTORS>
+                </COMPOSITION-TYPE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+
+        <AR-PACKAGE>
+            <SHORT-NAME>system root</SHORT-NAME>
+            <ELEMENTS>
+                <SYSTEM-TOPOLOGY-TYPE>
+                    <SHORT-NAME>system topology</SHORT-NAME>
+                    <COMMUNICATION-CLUSTERS />
+                    <TOPOLOGY-ELEMENTS>
+                        <ECU-INSTANCE>
+                            <SHORT-NAME>ecu</SHORT-NAME>
+                            <COMM-PORTS />
+                            <ECU-TREF DEST="ECU">/ecu root/ecu</ECU-TREF>
+                            <POWER-SUPPLY>BATTERY</POWER-SUPPLY>
+                            <PROCESSING-UNIT-ENDIANNESS>MOST-SIGNIFICANT-BYTE-LAST</PROCESSING-UNIT-ENDIANNESS>
+                        </ECU-INSTANCE>
+                    </TOPOLOGY-ELEMENTS>
+                </SYSTEM-TOPOLOGY-TYPE>
+                <SYSTEM>
+                    <SHORT-NAME>system</SHORT-NAME>
+                    <COMMUNICATION>
+                        <COMMUNICATION-MATRIXS />
+                    </COMMUNICATION>
+                    <MAPPING>
+                        <SHORT-NAME>sys mapping</SHORT-NAME>
+                        <DATA-MAPPINGS />
+                        <SW-MAPPINGS>
+                            <SW-COMP-TO-ECU-MAPPING>
+                                <SHORT-NAME>ecu instance</SHORT-NAME>
+                                <COMPONENT-IREFS>
+                                    <COMPONENT-IREF>
+                                        <SOFTWARE-COMPOSITION-REF DEST="SOFTWARE-COMPOSITION">
+                                            /system root/system/comp instance
+                                        </SOFTWARE-COMPOSITION-REF>
+                                        <TARGET-COMPONENT-PROTOTYPE-REF DEST="COMPONENT-PROTOTYPE">
+                                            /comp root/comp/swc1
+                                        </TARGET-COMPONENT-PROTOTYPE-REF>
+                                    </COMPONENT-IREF>
+                                    <COMPONENT-IREF>
+                                        <SOFTWARE-COMPOSITION-REF DEST="SOFTWARE-COMPOSITION">
+                                            /system root/system/comp instance
+                                        </SOFTWARE-COMPOSITION-REF>
+                                        <TARGET-COMPONENT-PROTOTYPE-REF DEST="COMPONENT-PROTOTYPE">
+                                            /comp root/comp/swc2
+                                        </TARGET-COMPONENT-PROTOTYPE-REF>
+                                    </COMPONENT-IREF>
+                                </COMPONENT-IREFS>
+                                <ECU-INSTANCE-IREF>
+                                    <SYSTEM-TOPOLOGY-INSTANCE-REF DEST="SYSTEM-TOPOLOGY-INSTANCE">
+                                        /system root/system/system topology instance
+                                    </SYSTEM-TOPOLOGY-INSTANCE-REF>
+                                    <ECU-INSTANCE-REF DEST="ECU-INSTANCE">
+                                        /system root/system topology/ecu
+                                    </ECU-INSTANCE-REF>
+                                </ECU-INSTANCE-IREF>
+                            </SW-COMP-TO-ECU-MAPPING>
+                        </SW-MAPPINGS>
+                    </MAPPING>
+                    <SOFTWARE-COMPOSITION>
+                        <SHORT-NAME>comp instance</SHORT-NAME>
+                        <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-TYPE">
+                            /comp root/comp
+                        </SOFTWARE-COMPOSITION-TREF>
+                    </SOFTWARE-COMPOSITION>
+                    <TOPOLOGY>
+                        <SHORT-NAME>system topology instance</SHORT-NAME>
+                        <TOPOLOGY-TREF DEST="SYSTEM-TOPOLOGY-TYPE">
+                            /system root/system topology
+                        </TOPOLOGY-TREF>
+                    </TOPOLOGY>
+                </SYSTEM>
+            </ELEMENTS>
+        </AR-PACKAGE>
+
+        <AR-PACKAGE>
+            <SHORT-NAME>ecu root</SHORT-NAME>
+            <ELEMENTS>
+                <ECU>
+                    <SHORT-NAME>ecu</SHORT-NAME>
+                    <ECU-ABSTRACTION-REF DEST="COMPOSITION-TYPE">/comp root/comp</ECU-ABSTRACTION-REF>
+                </ECU>
+            </ELEMENTS>
+        </AR-PACKAGE>
+
+    </TOP-LEVEL-PACKAGES>
+</AUTOSAR>

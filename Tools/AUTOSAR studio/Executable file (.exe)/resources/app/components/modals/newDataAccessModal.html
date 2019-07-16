@@ -1,0 +1,72 @@
+	<!--New Data Access Modal-->
+	<div class="modal fade" id="newDataAccessModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog dataAccessModal" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h3 class="modal-title text-primary">
+	        	Create new Data Accesss
+	        	<div class="text-muted" style="font-size: 13px">Please choose a unique Data Access name, don't use spical characters</div>
+	        </h3>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body pre-scrollable">
+	        <div class="row" >
+			  		<div class="col-12">
+			  			<div class="items">
+			  				<div id="Send-reciever-read">
+								<form id="Send-reciever-read-form">
+									<div class="form-group" >
+										<label>Access Variable Name</label>
+										<input type="text" class="form-control" id="InputAccessName"  placeholder="Enter Access Variable Name">
+									</div>
+									<div class="form-group">
+										<label>Port Name</label>
+											<select class="form-control" id="PortNameSelect" onchange="portSelectChange()">
+											</select>
+										<div id ="SR-options" style="display: none">
+											<label>Communication Type</label>
+												<select class="form-control" id="CommunicationType">
+													<option>Explicit</option>
+													<option>Implicit</option>
+												</select>
+											<label>Data Element</label>
+												<select class="form-control" id="DataElementsSelect"></select>
+										</div>		
+										<div  id ="CS-options" style="display: none">
+											<label>Operation</label>
+											<select class="form-control" id="OperationsSelect">
+											</select>		
+										</div>
+
+									</div>
+									  <label>Data Access Points</label>
+										<div class="container">
+										  <div class="row">
+											<div class="col-sm" id="showDAccessName" style="background-color:yellow;">
+											</div>
+											<div class="col-sm" id="showDAccessType" style="background-color:pink;">
+											</div>
+											<div class="col-sm" id="showDAccessComType" style="background-color:yellow;">
+											</div>
+											<div class="col-sm" id="showDAccessInterfaceType" style="background-color:pink;">
+											</div>
+											<div class="col-sm" id="deleteDAccess" style="background-color:white;">
+											</div>												
+										  </div>
+										</div>
+								</form>
+								<br>
+							</div>
+			  			</div>
+			  		</div>
+			  	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-success saveDataAccess">Save Data Access</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>	

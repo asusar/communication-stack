@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>ASUSAR Studio - Software Components Architecture</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<!-- Scripts -->
+		<script src="js/includer.js"></script>
+		<script src="js/dataflow-init.js"></script>
+		<script src="plugins/gojs/release/go.js"></script>
+		<!-- Building code -->
+		<script src="js/dataflow-code.js"></script>
+		<script src="js/dataflow-functions.js"></script>
+	</head>
+
+	<body onload="init()">
+		<div class="container" id="app">
+			<div include-html="components/header.html"></div>
+	  		<div class="row">
+	  			<!-- Header helpers buttons -->
+				<div class="col-3">
+					<ul class="list-group">
+						<h5 class="text-primary" style="font-weight: bold;">System Configurations</h5>
+					  <a href="#" class="list-group-item list-group-item-action responsive-width-data" id="showDataTypesWindowid">
+					  	Show Data Types and Data Elements
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action responsive-width-data" id="addNewSenderReceiverInterfacesWindowid">
+					  	Add Sender-Reciever Interface
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action responsive-width-data" id="addNewClientServerInterfacesWindowid">
+					  	Add Client-Server Interface
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action responsive-width-data" id="showInterfacesWindowid">
+					  	Show Interfaces
+					  </a>
+					  <h5 class="text-primary" style="font-weight: bold; margin-top: 25px">Advanced</h5>
+					  <li class="list-group-item">
+					  		<button class="btn btn-success btn-block responsive-width" id ="SaveButton" onclick="saveConfirm()">
+					  			<i class="fa fa-save"></i>
+					  			Save changes to DB
+					  		</button>
+					  </li>
+					  <li class="list-group-item">
+					      	<a class="btn btn-primary btn-block responsive-width" href="javascript:void(0)" id="generate_DataTypesAndInterfaces_arxml" data-toggle="tooltip">
+					      		<i class="fa fa-file-excel"></i>
+					      		Data Types And Interfaces ARXML
+					      	</a>
+					  </li>
+					  <li class="list-group-item">
+					      	<button class="btn btn-warning btn-block responsive-width" onclick="returnToMainWindow()">
+					      		<i class="fa fa-arrow-circle-left"></i>
+					      		Return to main window
+					      	</button>
+					  </li>
+					</ul>
+				</div>
+
+				<!-- Data flow and generator area -->
+	  			<div class="col-9">
+	  				<h5 class="text-primary" style="font-weight: bold;">
+	  					Builder window
+	  					<small class="text-muted" style="font-size: 13px">Double click to create new component</small>
+	  				</h5>
+					<div id="sample">
+					  <div id="myDiagramDiv" style="width:100%; height:490px; border:2px dashed #AAA">
+
+					  </div>
+					  <div id="key-map">
+							<span class="sender">Sender</span>
+							<span class="reciver">Reciver</span>
+							<br>
+							<span class="server">Server</span>
+							<span class="client">Client</span>
+						</div>
+					  <div style="margin-top: 15px">
+					    	<div></div>
+					    	<textarea id="mySavedModel" style="width:100%; height:250px; display: none;">
+						    	{ "class": "go.GraphLinksModel",
+									  "copiesArrays": true,
+									  "copiesArrayObjects": true,
+									  "linkFromPortIdProperty": "fromPort",
+									  "linkToPortIdProperty": "toPort",
+									  "nodeDataArray": []
+								}
+					    	</textarea>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<template>
+				<div include-html="components/modals/PropModal.html"></div>
+				<div include-html="components/modals/newSoftwareComponentModal.html"></div>
+				<div include-html="components/modals/newPortModal.html"></div>
+				<div include-html="components/modals/DataTypesWindowModal.html"></div>
+				<div include-html="components/modals/AddSenderReceiverInterfacesWindowsModal.html"></div>
+				<div include-html="components/modals/AddClientServerInterfacesWindowsModal.html"></div>
+				<div include-html="components/modals/ShowInterfacesWindowsModal.html"></div>
+				<div include-html="components/modals/NewOperationWindowsModal.html"></div>
+				<div include-html="components/modals/returnToMainWindowModal.html"></div>
+				<div include-html="components/modals/newComponentModal.html"></div>
+				<div include-html="components/modals/newRunnableModal.html"></div>
+				<div include-html="components/modals/newDataAccessModal.html"></div>
+				<div include-html="components/modals/deleteRunnableModal.html"></div>
+				<div include-html="components/modals/setTriggeredEventModal.html"></div>
+			</template>
+		</div>
+	</body>
+
+	<!-- Plugins -->
+	<script type="text/javascript" src="plugins/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/XMLWriter/XMLWriter.js"></script>	
+	<script type="text/javascript" src="plugins/formatXml.js"></script>
+	
+
+  	<!-- Building code -->
+    <script type="text/javascript" src="js/generation/blocks/InternalBehavior.js"></script>
+	<script type="text/javascript" src="js/export-arxml.js"></script>
+	<script type="text/javascript" src="js/generation/SWCApplication.js"></script>
+	<script type="text/javascript" src="js/generation/DataTypesAndInterfaces.js"></script>
+	<script type="text/javascript" src="js/generation/Composition.js"></script>
+
+  	<script src="plugins/vuejs.js"></script>
+  	<script>
+	  	new Vue({
+		  el: '#app',
+		  created() {
+		  	includeHTML()
+		  },
+		  mounted() {
+		  	window.closer = "Y_N3$S9n"			
+		  	let self = this
+		  	setTimeout(function(){
+		  		self.loadExternalJSFiles()
+		  		self.callTooltip()
+		  	}, 750)
+		  },
+		  methods: {
+		  	callTooltip() {
+		  		$('[data-toggle="tooltip"]').tooltip()
+		  	},
+		  	loadExternalJSFiles() {
+		  		/* Load properties.js after delay time */
+	  			var script = document.createElement('script');
+				script.src = "js/_properties.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+
+				var script = document.createElement('script');
+				script.src = "js/Ports_Propperties.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+
+				var script = document.createElement('script');
+				script.src = "js/header-helper-buttons.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+
+				var script = document.createElement('script');
+				script.src = "js/Runnables_Properties.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+		  	}
+		  }
+		})
+	</script>
+</html>
+

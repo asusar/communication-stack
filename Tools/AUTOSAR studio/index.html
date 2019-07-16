@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+    <title>ASUSAR Studio - Interface</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="js/includer.js"></script>
+  </head>
+  <body>
+  	<div class="container">
+  		 <div include-html="components/header.html"></div>
+	  		<div class="row">
+	  		<div class="col-12">
+	  			<div class="row">
+	  				<div class="col-sm-6 col-md-6 col-lg-3">
+			          <div style="margin:0 auto 10px auto;">
+			          	<ul class="list-group">
+						  <li class="list-group-item">
+			  				<!--<button id="AccountDataBtn" class="btn btn-outline-info btn-block responsive-width" style="margin-bottom: 10px;">
+			  					<i class="fa fa-user"></i>
+			  					Account
+			  				</button>-->
+			            	<button id="newProjectBtn" class="btn btn-outline-success btn-block" style="margin-bottom: 10px">
+			            		<i class="fa fa-plus"></i>
+			            		Create new project
+			            	</button>
+			  				<button id="deleteProjectBtn" class="btn btn-outline-danger btn-block">
+			  					<i class="fa fa-trash"></i>
+			  					Delete project
+			  				</button>
+			  				<hr>
+			  				<button class="btn btn-outline-secondary btn-block" style="margin-bottom: 10px;">
+			  					<i class="fa fa-file"></i>
+			  					Documentation
+			  				</button>
+			  				<button class="btn btn-outline-secondary btn-block">
+			  					<i class="fa fa-cog"></i>
+			  					Setting
+			  				</button>
+						  </li>
+						</ul>
+			          </div>
+	  				</div>
+	  				<div class="col-sm-6 col-md-6 col-lg-9" style="border-left: 1px dashed #AAA; padding-bottom: 150px">
+			          <div class="wapper_projects" style="display: none;">
+			            <h2 class="text-center" style="margin-bottom: 15px">
+			            	<span class="text-primary">Your projects</span>
+			            	<div id="projectNumbers" style="font-size: 14px; margin-top: 5px; color: #AAA"></div>
+			            </h2>
+			            <div class="row"></div>
+			          </div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+  	</div>
+
+    <div include-html="components/modals/account_modal.html"></div>
+	<div include-html="components/modals/newProjectModal.html"></div>
+	<div include-html="components/modals/deleteProjectModal.html"></div>
+	<div include-html="components/modals/renamesProjectModal.html"></div>
+	
+    <script type="text/javascript" src="plugins/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main Screen Functionality-->
+    <script type="text/javascript" src="js/mainscreen.js"></script>
+    <script type="text/javascript">
+    	$()
+    </script>
+  </body>
+</html>

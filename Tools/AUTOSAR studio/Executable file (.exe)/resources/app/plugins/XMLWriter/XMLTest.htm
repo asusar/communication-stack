@@ -1,0 +1,89 @@
+<html>
+<head>
+    <script src="Global.js" language="javascript"></script>
+    <script src="XMLWriter.js" language="javascript"></script>
+    <script language="javascript" type="text/javascript">
+        function WriteTest()
+        {
+            try
+            {
+                var XML=new XMLWriter();
+                XML.BeginNode("Example");
+                XML.Attrib("SomeAttribute", "And Some Value");
+                XML.Attrib("AnotherAttrib", "...");
+                XML.WriteString("This is an example of the JS XML WriteString method.");
+                XML.Node("Name", "Value");
+                XML.BeginNode("SubNode");
+                XML.BeginNode("SubNode2");
+                XML.EndNode();
+                XML.BeginNode("SubNode3");
+                XML.WriteString("Blah blah.");
+                XML.EndNode();
+                XML.Close(); // Takes care of unended tags.
+                // The replace in the following line are only for making the XML look prettier in the textarea.
+                document.getElementById("ExampleOutput").value=XML.ToString().replace(/</g,"\n<");
+            }
+            catch(Err)
+            {
+                alert("Error: " + Err.description);
+            }
+            return false;
+        }
+
+        function WriteForm(e)
+        {
+            try
+            {
+                var Frm=Settings.SrcElement(e);
+                var XML=new XMLWriter();
+                XML.BeginNode(Frm.name);
+                XML.Attrib("Example", "Attribute & Value");
+                var Nodes=Frm.elements;
+                for (var i=0;i<Nodes.length;i++)
+                    XML.Node(Nodes[i].name, Nodes[i].value);
+                XML.EndNode();
+                XML.Close();
+                document.getElementById("ExampleOutput").value=XML.ToString().replace(/</g,"\n<");
+            }
+            catch(Err)
+            {
+                alert("Error: " + Err.description);
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    Try entering values into the following fields, then click the Test button to see the
+    resulting XML.
+    <form name="User" method="post" action="#" onsubmit="return WriteForm(event);">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="FirstName" /></td>
+            </tr>
+            <tr>
+                <td>Middle Name:</td>
+                <td><input type="text" name="MiddleName" /></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="LastName" /></td>
+            </tr>
+            <tr>
+                <td>Birth Date:</td>
+                <td>
+                    <input type="text" name="BirthDate" />
+                    <input type="submit" value="Test" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <a href="#" onclick="WriteTest();">Or click here to see another XML exmaple.</a>
+
+    <br /><br />
+    Output:
+    <form><textarea id="ExampleOutput" style="width:100%" rows="10"></textarea></form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "nodeDataArray": [
+    {
+      "Event_Name": "Init_Event",
+      "short_name": "initRunnable_initEvent",
+      "Runnable_Dest": "Distnation Runnable"
+    },
+    {
+      "Event_Name": "Timing_Event",
+      "short_name": "initRunnable_initEvent",
+      "Runnable_Dest": "Distnation Runnable",
+      "Periodicity" : "0.6"
+    },
+    {
+      "Event_Name": "DataRecieved_Event",
+      "short_name": "initRunnable_initEvent",
+      "Runnable_Dest": "Distnation Runnable",
+      "Context_R_Port_ref": "ReceiverPortExample",
+      "Target_data_element_ref" :"DataElement8BitExample"
+    },
+    {
+      "Event_Name": "OperationInvokedEvent_Event",
+      "short_name": "initRunnable_initEvent",
+      "Runnable_Dest": "Distnation Runnable",
+      "Context_P_Port_ref": "ClientPortExample",
+      "Target_provided_op_ref" :"DataElement8BitExample"
+    }
+  
+  ],
+  "dependencies": {
+    "xml-writer": "^1.7.0"
+  }
+}

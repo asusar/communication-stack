@@ -1,0 +1,41 @@
+	<!--Sender and Reciever Interfaces Modal-->
+	<div class="modal fade" id="AddSenderReceiverInterfacesWindowsModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Add Sender-Receiver Interface</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body pre-scrollable">
+	        <div class="row">
+			  		<div class="col-12">
+			  			<div class="col-12" id="wholesenderreceiverwindow">
+			  				<div class="form-group">
+							 	<label>Interface name</label>
+							    <input type="text" class="form-control" name="senderreceiver_name" id="senderreceiver_name">
+							  </div>
+							  <button class="btn btn-outline-primary" id="addDataElementid" >add Data element</button><br><br>
+							  <div class="form-group" style="display:none"  id="dataelementform"  >
+							 	<label>Data element name </label>
+							    <input type="text" class="form-control" name="dataelement_name"id="dataelement_name">
+							  </div>
+                        <br>
+
+					<div class="form-group" id="dataelementformsaveclose" style="display:none">
+					 <button class="btn btn-outline-primary" id="closedataelement" >close</button>
+					<button class="btn btn-outline-primary" id="savedataelement" >save data element</button><br>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success save-senderreceiver">Save Interface</button>
+				</div>
+			</div>
+		</div>
+	</div>
