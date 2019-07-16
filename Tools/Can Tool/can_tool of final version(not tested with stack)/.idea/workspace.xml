@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6885cf9a-ac41-4b07-9420-35c5c80566f0" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/can_update4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="1672" column="63" selection-start-line="1672" selection-start-column="63" selection-end-line="1672" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#268#21484#0" />
+                <element signature="e#1574#2678#0" />
+                <element signature="e#21514#21597#0" />
+                <element signature="e#21633#21681#0" />
+                <element signature="e#21698#21886#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ParserGenerate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#119#559#0" />
+                <element signature="e#764#2698#0" />
+                <element signature="e#2755#9297#0" />
+                <element signature="e#9355#20406#0" />
+                <element signature="e#20461#26323#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Generate_Hea</find>
+      <find>Generate_He</find>
+      <find>Generate_Header</find>
+      <find>get_controllers_parameters</find>
+      <find>Generate_H</find>
+      <find>add</find>
+      <find>addChildClick</find>
+      <find>openMenu</find>
+      <find>CanHardwareObjects_gb</find>
+      <find>get_selected(</find>
+      <find>len(self.CanHardwareObjects_gb)</find>
+      <find>Create_new_HardwareObject</find>
+      <find>get_Hardware_parameters</find>
+      <find>header</find>
+      <find>Controller_Ref</find>
+      <find>HW_count</find>
+      <find>index</find>
+      <find>CanBaudrates_gb</find>
+      <find>groupBox_4</find>
+      <find>choose</find>
+      <find>done</find>
+      <find>HW_Object_count</find>
+      <find>data</find>
+      <find>item</find>
+      <find>Can_Hardware_Objects_Count</find>
+      <find>model</find>
+      <find>create_new_h</find>
+      <find>gener</find>
+      <find>generate</find>
+      <find>create</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Can.arxml" />
+        <option value="$PROJECT_DIR$/oooo/ARXML/Can_ARXML.arxml" />
+        <option value="$PROJECT_DIR$/Can_ARXML.arxml" />
+        <option value="$PROJECT_DIR$/iiiii/ARXML/Can_ARXML.arxml" />
+        <option value="$PROJECT_DIR$/test21/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/test23/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/test25/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/test29/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/test51/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/test68/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/test117/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/test130/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/test131/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/aly/Header/Can_Cfg.h" />
+        <option value="$PROJECT_DIR$/ParserGenerate.py" />
+        <option value="$PROJECT_DIR$/can_update4.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="525" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Course" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="can_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="can_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="can_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aly\PycharmProjects\can_tool" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="can_update4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="can_tool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/can_update4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.can_update4" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22934566" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.060029283" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.284041" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37481698" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.329429" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.25768667" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14474554" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.060029283" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24304539" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37481698" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.329429" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.25768667" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test117/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test125/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/test125/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test126/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test126/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/zz/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/dddd/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test127/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/test127/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test130/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/jjj/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/jjjjj/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test131/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test132/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test133/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test133/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/test123/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test118/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test121/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test105/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test128/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test105/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/test92/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test87/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test85/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test83/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test135/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test94/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test65/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test135/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/test137/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test136/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test139/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test138/Header/Can_Cfg.h" />
+    <entry file="file://$USER_HOME$/.PyCharmEdu2018.3/system/python_stubs/-1442825926/PyQt4/QtCore/QObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="178" column="8" selection-start-line="178" selection-start-column="8" selection-end-line="178" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmEdu2018.3/system/python_stubs/-1442825926/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="509" column="4" selection-start-line="500" selection-start-column="7" selection-end-line="509" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test145/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test144/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test143/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/test136/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/aly/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/testtool/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/aajjaja/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/aajjaja/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/gggg/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/gggg/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/aly_ammar/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/aly_ammar/ARXML/Can_ARXML.arxml" />
+    <entry file="file://$PROJECT_DIR$/testtesttest/Header/Can_Cfg.h" />
+    <entry file="file://$PROJECT_DIR$/ParserGenerate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#119#559#0" />
+            <element signature="e#764#2698#0" />
+            <element signature="e#2755#9297#0" />
+            <element signature="e#9355#20406#0" />
+            <element signature="e#20461#26323#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/can_update4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="1672" column="63" selection-start-line="1672" selection-start-column="63" selection-end-line="1672" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#268#21484#0" />
+            <element signature="e#1574#2678#0" />
+            <element signature="e#21514#21597#0" />
+            <element signature="e#21633#21681#0" />
+            <element signature="e#21698#21886#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

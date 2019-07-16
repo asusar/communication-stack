@@ -488,7 +488,7 @@ class Ui_CanTool(object):
 
     # Can_Baudrates_Count[0][1] = 0
 
-
+    num_of_generated_controllers=0
 
     Can_HW_Filters_Count = []
 
@@ -531,22 +531,27 @@ class Ui_CanTool(object):
         self.label_3.setGeometry(QtCore.QRect(30, 170, 190, 16))
         self.label_3.setObjectName(_fromUtf8("label_3"))
         self.label_4 = QtGui.QLabel(self.groupBox)
-        self.label_4.setGeometry(QtCore.QRect(30, 220, 200, 16))
+        self.label_4.setGeometry(QtCore.QRect(30, 220, 290, 16))
         self.label_4.setObjectName(_fromUtf8("label_4"))
+
+        self.label_11 = QtGui.QLabel(self.groupBox)
+        self.label_11.setGeometry(QtCore.QRect(30, 270, 290, 16))
+        self.label_11.setObjectName(_fromUtf8("label_11"))
+
         self.label_5 = QtGui.QLabel(self.groupBox)
-        self.label_5.setGeometry(QtCore.QRect(30, 270, 190, 16))
+        self.label_5.setGeometry(QtCore.QRect(30, 320, 190, 16))
         self.label_5.setObjectName(_fromUtf8("label_5"))
         self.label_6 = QtGui.QLabel(self.groupBox)
-        self.label_6.setGeometry(QtCore.QRect(30, 320, 190, 16))
+        self.label_6.setGeometry(QtCore.QRect(30, 370, 270, 16))
         self.label_6.setObjectName(_fromUtf8("label_6"))
         self.label_7 = QtGui.QLabel(self.groupBox)
-        self.label_7.setGeometry(QtCore.QRect(30, 370, 190, 16))
+        self.label_7.setGeometry(QtCore.QRect(30, 420, 190, 16))
         self.label_7.setObjectName(_fromUtf8("label_7"))
         self.label_8 = QtGui.QLabel(self.groupBox)
-        self.label_8.setGeometry(QtCore.QRect(30, 420, 190, 16))
+        self.label_8.setGeometry(QtCore.QRect(30, 470, 190, 16))
         self.label_8.setObjectName(_fromUtf8("label_8"))
         self.label_9 = QtGui.QLabel(self.groupBox)
-        self.label_9.setGeometry(QtCore.QRect(30, 470, 190, 16))
+        self.label_9.setGeometry(QtCore.QRect(30, 520, 190, 16))
         self.label_9.setObjectName(_fromUtf8("label_9"))
  #must be edited for RWperiodsss ###########################
 
@@ -556,45 +561,49 @@ class Ui_CanTool(object):
 
 
         self.Can_Index = QtGui.QLineEdit(self.groupBox)
-        self.Can_Index.setGeometry(QtCore.QRect(290, 70, 113, 20))
+        self.Can_Index.setGeometry(QtCore.QRect(320, 70, 113, 20))
         self.Can_Index.setObjectName(_fromUtf8("Can_Index"))
 
         self.Can_main_fn_Mode_period = QtGui.QLineEdit(self.groupBox)
-        self.Can_main_fn_Mode_period.setGeometry(QtCore.QRect(290, 120, 113, 20))
+        self.Can_main_fn_Mode_period.setGeometry(QtCore.QRect(320, 120, 113, 20))
         self.Can_main_fn_Mode_period.setObjectName(_fromUtf8("Can_main_fn_Mode_period"))
 
         self.Can_Timeout_Duration = QtGui.QLineEdit(self.groupBox)
-        self.Can_Timeout_Duration.setGeometry(QtCore.QRect(290, 170, 113, 20))
+        self.Can_Timeout_Duration.setGeometry(QtCore.QRect(320, 170, 113, 20))
         self.Can_Timeout_Duration.setObjectName(_fromUtf8("Can_Timeout_Duration"))
 
         self.Can_Main_Fn_Wakeup = QtGui.QLineEdit(self.groupBox)
-        self.Can_Main_Fn_Wakeup.setGeometry(QtCore.QRect(290, 220, 113, 20))
+        self.Can_Main_Fn_Wakeup.setGeometry(QtCore.QRect(320, 220, 113, 20))
         self.Can_Main_Fn_Wakeup.setObjectName(_fromUtf8("Can_Main_Fn_Wakeup"))
 
+        self.Can_busoff_processing = QtGui.QLineEdit(self.groupBox)
+        self.Can_busoff_processing.setGeometry(QtCore.QRect(320, 270, 113, 20))
+        self.Can_busoff_processing.setObjectName(_fromUtf8("Can_busoff_processing"))
+
         self.Can_mul_transmission = QtGui.QCheckBox(self.groupBox)
-        self.Can_mul_transmission.setGeometry(QtCore.QRect(290, 270, 70, 17))
+        self.Can_mul_transmission.setGeometry(QtCore.QRect(290, 320, 70, 17))
         self.Can_mul_transmission.setText(_fromUtf8(""))
         self.Can_mul_transmission.setObjectName(_fromUtf8("Can_mul_transmission"))
 
         self.Can_Public_icom_support = QtGui.QCheckBox(self.groupBox)
-        self.Can_Public_icom_support.setGeometry(QtCore.QRect(290, 320, 70, 17))
+        self.Can_Public_icom_support.setGeometry(QtCore.QRect(290, 370, 70, 17))
         self.Can_Public_icom_support.setText(_fromUtf8(""))
         self.Can_Public_icom_support.setObjectName(_fromUtf8("Can_Public_icom_support"))
 
         self.Can_version_info = QtGui.QCheckBox(self.groupBox)
-        self.Can_version_info.setGeometry(QtCore.QRect(290, 370, 70, 17))
+        self.Can_version_info.setGeometry(QtCore.QRect(290, 420, 70, 17))
         self.Can_version_info.setText(_fromUtf8(""))
         self.Can_version_info.setObjectName(_fromUtf8("Can_version_info"))
 
         self.Can_Set_baudrate_API = QtGui.QCheckBox(self.groupBox)
-        self.Can_Set_baudrate_API.setGeometry(QtCore.QRect(290, 420, 70, 17))
+        self.Can_Set_baudrate_API.setGeometry(QtCore.QRect(290, 470, 70, 17))
         self.Can_Set_baudrate_API.setText(_fromUtf8(""))
         self.Can_Set_baudrate_API.setObjectName(_fromUtf8("Can_Set_baudrate_API"))
 
         # a bug was here label was not aligned correctly with checkbox ################
 
         self.Can_Dev_error = QtGui.QCheckBox(self.groupBox)
-        self.Can_Dev_error.setGeometry(QtCore.QRect(290, 470, 70, 17))
+        self.Can_Dev_error.setGeometry(QtCore.QRect(290, 520, 70, 17))
         self.Can_Dev_error.setText(_fromUtf8(""))
         self.Can_Dev_error.setObjectName(_fromUtf8("Can_Dev_error"))
 
@@ -718,9 +727,10 @@ class Ui_CanTool(object):
         self.label.setText(_translate("CanTool", "Can Index", None))
         self.label_2.setText(_translate("CanTool", "Can Main Function Mode Period", None))
         self.label_3.setText(_translate("CanTool", "Can TimeOut Duration", None))
-        self.label_4.setText(_translate("CanTool", "Can Main Function WakeUp Period", None))
+        self.label_4.setText(_translate("CanTool", "Can Main Function WakeUp Period(not supported)", None))
+        self.label_11.setText(_translate("CanTool", "Can MainFunction Busoff Period", None))
         self.label_5.setText(_translate("CanTool", "Can Multiplexed Transmission", None))
-        self.label_6.setText(_translate("CanTool", "Can Public Icom Support", None))
+        self.label_6.setText(_translate("CanTool", "Can Public Icom Support(not supported)", None))
         self.label_7.setText(_translate("CanTool", "Can Version Info API", None))
         #  the set baud_rate API  was not aligned correctly with its checkbox #####################3
         self.label_8.setText(_translate("CanTool", "Can Set BaudRate API", None))
@@ -1094,16 +1104,32 @@ class Ui_CanTool(object):
 
             # values[8] = 'False'
             # values[9] = 'False'
+            print("#ifndef INCLUDES_CAN_CFG_H_  " , file=generated_file)
+            print("#define INCLUDES_CAN_CFG_H_  " , file=generated_file)
+            print('\n\n', file=generated_file)
+            print("#define False 0U  " , file=generated_file)
+            print("#define True  1U " , file=generated_file)
+            i=0
+            for value in values:
+
+                if value == "True":
+                    values[i] = "1U"
+                elif value == "False":
+                     values[i] = "0U"
+                i+=1
+
+
             print("#define  " + parameters[6] + " " + values[6], file=generated_file)
-            print("#define  " + parameters[5] + " " + values[5]+'U', file=generated_file)
+            print("#define  " + parameters[5] + " " + values[5], file=generated_file)
             # print("#define  " + parameters[2] + " " + values[2]+'U', file=generated_file) #wake up parameter
             print("#define  " + parameters[4] + " " + values[4]+'U', file=generated_file)
             print("#define  " + parameters[1] + " " + values[1], file=generated_file)
             # print("#define  " + parameters[8] + " " + values[8], file=generated_file)
             # print("#define  " + parameters[7] + " " + values[7], file=generated_file) ### ICOM support####
-            print("#define  " + parameters[7] + " " + values[7], file=generated_file)
+            print("#define  " + parameters[7] + " " + values[7]+'U', file=generated_file)
             print("#define  " + parameters[0] + " " + values[0], file=generated_file)
             print("#define  " + parameters[2] + " " + values[2]+'U', file=generated_file)
+            print("#define  " + parameters[3] + " " + values[3]+'U', file=generated_file)
 
 
 
@@ -1204,30 +1230,18 @@ class Ui_CanTool(object):
                           print("      },\\", file=generated_file)   # end of controller
                          else:
                               print(" }\\", file=generated_file)
-                              print(" }\\", file=generated_file)  # end of all controllers #####
-                              print("};", file=generated_file)  # end of all controllers #####
-
+                              print(" },\\", file=generated_file)  # end of all controllers #####
                         else:
                                print("        },\\", file=generated_file)
 
-                # if k == 2:
-                #     print("};", file=generated_file)  # end of all controllers #####
-            print('\n', file=generated_file)
-            for p in range(0, pp_counter):
-
-                print("#define  " + pp_string[p] + " " + pp_value[p], file=generated_file)
-
-            print('\n\n\n\n', file=generated_file)
-
-            print("#define hohMap \\", file=generated_file)
-            print("{.CanConfigSet.CanHardwareObject =\\"+"\n"+" {\\", file=generated_file)
+            print(".CanConfigSet.CanHardwareObject =\\"+"\n"+" {\\", file=generated_file)
 
             hoh_no = parser.HW_objects_no()
             for i in range(1, hoh_no):
                 receive_flag = False
                 print("  {\\", file=generated_file)
                 param_name, param_value = parser.HW_object_params(i)
-                for j in range(0, 7):
+                for j in range(0, 6):
                  string = param_value[j]
 
                  if param_value[j] == "RECEIVE":
@@ -1285,11 +1299,18 @@ class Ui_CanTool(object):
             print("#define  "+"Max_CanHwObjectCount  " +str(max_hwcount)+"U" , file=generated_file)
             print("#define  "+"Max_num_of_baudrates  " +str(max_bdr_no-1)+"U", file=generated_file)
             print("#define  "+"NUM_OF_CAN_CONTROLLERS  2U", file=generated_file)
+            print('\n\n\n\n', file=generated_file)
+            print("#define INTERRUPT 0U  " , file=generated_file)
+            print("#define  POLLING 2U " , file=generated_file)
+
+            for p in range(0, pp_counter):
+
+                print("#define  " + pp_string[p] + " " + pp_value[p], file=generated_file)
 
 
+            print('\n\n', file=generated_file)
 
-
-
+            print("#endif", file=generated_file)
 
 
 
@@ -1332,13 +1353,13 @@ class Ui_CanTool(object):
             parent = self.model.itemFromIndex(s)
             parent.appendRow(item)
             self.remove_baud_rates_container.append(item)
-            item.appendRow(QStandardItem("Con"+str(self.Can_Controllers_Count-1)+" Baudrate config_1"))
+            item.appendRow(QStandardItem("Can"+str(self.Can_Controllers_Count-1)+" Baudrate config_1"))
             self.Create_new_Baudrate(self.Can_Controllers_Count-1)
             if("Can Controller Baudrate config_1" in getchild):
                 self.CanBaudrates_gb[0].setVisible(True)
 
         if("Controller_" in getchild):
-            text = "Con"+str(getchild[-1:])+" Baudrate config_"+str(self.Can_Baudrates_Count[int(getchild[-1:])-1])
+            text = "Can"+str(getchild[-1:])+" Baudrate config_"+str(self.Can_Baudrates_Count[int(getchild[-1:])-1])
             self.Can_Baudrates_Count[int(getchild[-1:])-1] = self.Can_Baudrates_Count[int(getchild[-1:])-1]+1
             self.Create_new_Baudrate(int(getchild[-1:]))
             item = QStandardItem(text)
@@ -1547,20 +1568,20 @@ class Ui_CanTool(object):
         self.label_50.setGeometry(QtCore.QRect(30, 270, 200, 16))
         self.label_50.setObjectName(_fromUtf8("label_5"))
         self.label_60 = QtGui.QLabel(self.groupBox_2)
-        self.label_60.setText(_translate("MainWindow", "Can Wakeup Processing", None))
-        self.label_60.setGeometry(QtCore.QRect(30, 320, 200, 16))
+        self.label_60.setText(_translate("MainWindow", "Can Wakeup Processing(not supported)", None))
+        self.label_60.setGeometry(QtCore.QRect(30, 320, 240, 16))
         self.label_60.setObjectName(_fromUtf8("label_6"))
         self.label_70 = QtGui.QLabel(self.groupBox_2)
         self.label_70.setText(_translate("MainWindow", "Can Controller Activation", None))
         self.label_70.setGeometry(QtCore.QRect(30, 370, 200, 16))
         self.label_70.setObjectName(_fromUtf8("label_7"))
         self.label_80 = QtGui.QLabel(self.groupBox_2)
-        self.label_80.setText(_translate("MainWindow", "Can Wakeup support", None))
-        self.label_80.setGeometry(QtCore.QRect(30, 420, 200, 16))
+        self.label_80.setText(_translate("MainWindow", "Can Wakeup support(not supported)", None))
+        self.label_80.setGeometry(QtCore.QRect(30, 420, 240, 16))
         self.label_80.setObjectName(_fromUtf8("label_8"))
         self.label_90 = QtGui.QLabel(self.groupBox_2)
-        self.label_90.setText(_translate("MainWindow", "Can Wakeup Functionality API", None))
-        self.label_90.setGeometry(QtCore.QRect(30, 470, 200, 16))
+        self.label_90.setText(_translate("MainWindow", "Can Wakeup FunctionalityAPI(not supported)", None))
+        self.label_90.setGeometry(QtCore.QRect(30, 470, 260, 16))
         self.label_90.setObjectName(_fromUtf8("label_9"))
         self.Can_Controller_ID = QtGui.QLineEdit(self.groupBox_2)
         self.Can_Controller_ID.setGeometry(QtCore.QRect(290, 70, 200, 20))
@@ -1573,13 +1594,13 @@ class Ui_CanTool(object):
         self.Can_Tx_Processing.setObjectName(_fromUtf8("Can_Tx_Processing"))
         self.Can_Tx_Processing.addItem('INTERRUPT')
         self.Can_Tx_Processing.addItem('POLLING')
-        self.Can_Tx_Processing.addItem('MIXED')
+        # self.Can_Tx_Processing.addItem('MIXED')
         self.Can_Rx_Processing = QtGui.QComboBox(self.groupBox_2)
         self.Can_Rx_Processing.setGeometry(QtCore.QRect(290, 220, 200, 22))
         self.Can_Rx_Processing.setObjectName(_fromUtf8("Can_Rx_Processing"))
         self.Can_Rx_Processing.addItem('INTERRUPT')
         self.Can_Rx_Processing.addItem('POLLING')
-        self.Can_Rx_Processing.addItem('MIXED')
+        # self.Can_Rx_Processing.addItem('MIXED')
         self.can_bus_off = QtGui.QComboBox(self.groupBox_2)
         self.can_bus_off.setGeometry(QtCore.QRect(290, 270, 200, 22))
         self.can_bus_off.setObjectName(_fromUtf8("can_bus_off"))
@@ -1632,8 +1653,8 @@ class Ui_CanTool(object):
         self.label_10000_1.setGeometry(QtCore.QRect(30, 70, 200, 21))
         self.label_10000_1.setObjectName(_fromUtf8("label"))
         self.label_20000_1 = QtGui.QLabel(self.groupBox_4)
-        self.label_20000_1.setText(_translate("MainWindow", "Can Fd Padding Value", None))
-        self.label_20000_1.setGeometry(QtCore.QRect(30, 120, 200, 16))
+        self.label_20000_1.setText(_translate("MainWindow", "CanHardwareObjectUsesPolling(not supported)", None))
+        self.label_20000_1.setGeometry(QtCore.QRect(30, 120, 280, 16))
         self.label_20000_1.setObjectName(_fromUtf8("label_2"))
         self.label_30000_1 = QtGui.QLabel(self.groupBox_4)
         self.label_30000_1.setText(_translate("MainWindow", "Can Object Type", None))
@@ -1648,8 +1669,8 @@ class Ui_CanTool(object):
         self.label_50000_1.setGeometry(QtCore.QRect(30, 270, 200, 16))
         self.label_50000_1.setObjectName(_fromUtf8("label_5"))
         self.label_60000_1 = QtGui.QLabel(self.groupBox_4)
-        self.label_60000_1.setText(_translate("MainWindow", "Can Trigger Transmit Enable", None))
-        self.label_60000_1.setGeometry(QtCore.QRect(30, 320, 200, 16))
+        self.label_60000_1.setText(_translate("MainWindow", "Can Trigger Transmit Enable(not supported)", None))
+        self.label_60000_1.setGeometry(QtCore.QRect(30, 320, 260, 16))
         self.label_60000_1.setObjectName(_fromUtf8("label_6"))
         self.label_70000_1 = QtGui.QLabel(self.groupBox_4)
         self.label_70000_1.setText(_translate("MainWindow", "Can Controller Ref", None))
@@ -1665,9 +1686,9 @@ class Ui_CanTool(object):
         self.Can_Object_Id_1 = QtGui.QLineEdit(self.groupBox_4)
         self.Can_Object_Id_1.setGeometry(QtCore.QRect(290, 70, 113, 20))
         self.Can_Object_Id_1.setObjectName(_fromUtf8("Can_Object_Id"))
-        self.Can_Fd_Padding_Value_1 = QtGui.QLineEdit(self.groupBox_4)
-        self.Can_Fd_Padding_Value_1.setGeometry(QtCore.QRect(290, 120, 113, 20))
-        self.Can_Fd_Padding_Value_1.setObjectName(_fromUtf8("Can_Fd_Padding_Value"))
+        self.Can_HardwareObject_UsesPolling_1 = QtGui.QCheckBox(self.groupBox_4)
+        self.Can_HardwareObject_UsesPolling_1.setGeometry(QtCore.QRect(320, 120, 113, 20))
+        self.Can_HardwareObject_UsesPolling_1.setObjectName(_fromUtf8("Can_HardwareObject_UsesPolling"))
         self.Can_Object_Type_1 = QtGui.QComboBox(self.groupBox_4)
         self.Can_Object_Type_1.setGeometry(QtCore.QRect(290, 170, 111, 22))
         self.Can_Object_Type_1.setObjectName(_fromUtf8("Can_Object_Type"))
@@ -1685,7 +1706,7 @@ class Ui_CanTool(object):
         self.Can_Id_Type_1.addItem('EXTENDED')
         self.Can_Id_Type_1.addItem('MIXED')
         self.Can_Trigger_Transmit_Enable_1 = QtGui.QCheckBox(self.groupBox_4)
-        self.Can_Trigger_Transmit_Enable_1.setGeometry(QtCore.QRect(290, 320, 70, 17))
+        self.Can_Trigger_Transmit_Enable_1.setGeometry(QtCore.QRect(320, 320, 70, 17))
         self.Can_Trigger_Transmit_Enable_1.setText(_fromUtf8(""))
         self.Can_Trigger_Transmit_Enable_1.setObjectName(_fromUtf8("Can_Trigger_Transmit_Enable"))
 
@@ -1795,6 +1816,7 @@ class Ui_CanTool(object):
 
         self.CanHWFilter_gb[filters_num -1].append(self.groupBox_5)
 
+########## getting parameters from GUI #########################
 
     def get_controllers_parameters(self):
         controllers_parameters = []
@@ -1807,13 +1829,13 @@ class Ui_CanTool(object):
 
             con_ID=controller.findChildren(QtGui.QLineEdit,"Can_Controller_ID")
             Can_ID_error.append(int(con_ID[0].text()))
-
             con_base_address=controller.findChildren(QtGui.QLineEdit,"Can_Controller_Base_Address")
             con_TX=controller.findChildren(QtGui.QComboBox,"Can_Tx_Processing")
             Con_RX=controller.findChildren(QtGui.QComboBox,"Can_Rx_Processing")
             con_busoff=controller.findChildren(QtGui.QComboBox,"can_bus_off")
             con_wu=controller.findChildren(QtGui.QComboBox,"can_wakeup")
             con_activation = controller.findChildren(QtGui.QCheckBox,"can_controller_activation")
+
             con_wu_support= controller.findChildren(QtGui.QCheckBox,"can_wakeup_support")
             con_wu_API=controller.findChildren(QtGui.QCheckBox,"can_wakeup_API")
             con_default_BR=controller.findChildren(QtGui.QComboBox,"Baud_rate_config")
@@ -1833,6 +1855,7 @@ class Ui_CanTool(object):
             if flag==True:
                 controller_parameters.append(con_ID[0].text())
                 controller_parameters.append(str(con_activation[0].isChecked()))
+
                 controller_parameters.append(con_base_address[0].text())
                 controller_parameters.append(str(con_wu_support[0].isChecked()))
                 controller_parameters.append(str(con_wu_API[0].isChecked()))
@@ -1932,6 +1955,9 @@ class Ui_CanTool(object):
 
                     controller_parameters.append(bauderate_parameters)
             if i<2 :
+
+             if con_activation[0].isChecked():
+                 self.num_of_generated_controllers+=1
              controllers_parameters.append(controller_parameters)
             i = i+1
             flag = False
@@ -1950,6 +1976,7 @@ class Ui_CanTool(object):
         gen_BD_API = self.groupBox.findChildren(QtGui.QCheckBox,"Can_Set_baudrate_API")
         gen_version = self.groupBox.findChildren(QtGui.QCheckBox,"Can_version_info")
         gen_dev_error = self.groupBox.findChildren(QtGui.QCheckBox,"Can_Dev_error")
+        bus_off_processing=self.groupBox.findChildren(QtGui.QLineEdit,"Can_busoff_processing")
 
         CanGeneral.append(str(gen_dev_error[0].isChecked()))
         CanGeneral.append(str(gen_mul_trans[0].isChecked()))
@@ -1960,6 +1987,7 @@ class Ui_CanTool(object):
         CanGeneral.append(str(gen_version[0].isChecked()))
         CanGeneral.append(str(gen_BD_API[0].isChecked()))
         CanGeneral.append(str(gen_icom[0].isChecked()))
+        CanGeneral.append(bus_off_processing[0].text())
 
 
         # print(CanGeneral)
@@ -1979,7 +2007,7 @@ class Ui_CanTool(object):
             Can_Object_Id = HW_Object.findChildren(QtGui.QLineEdit, "Can_Object_Id")
             hw_object_error.append(int(Can_Object_Id[0].text()))
 
-            Can_Fd_Padding_Value = HW_Object.findChildren(QtGui.QLineEdit, "Can_Fd_Padding_Value")
+            Can_HardwareObject_UsesPolling = HW_Object.findChildren(QtGui.QCheckBox, "Can_HardwareObject_UsesPolling")
             HW_object_count = HW_Object.findChildren(QtGui.QLineEdit, "HW_Object_count")
             hw_count = int(HW_object_count[0].text())
 
@@ -2007,12 +2035,12 @@ class Ui_CanTool(object):
                    self.generation_flag = False
 
             elif hw_count<1:
-                 string ="HW objectcount paramtet in hardware object"+str(count+1)+" shall be greater than zero"
+                 string ="HW objectcount paramter in hardware object"+str(count+1)+" shall be greater than zero"
                  self.display_error(string)
                  self.generation_flag=False
 
             elif hw_count<2 and handle_type == "BASIC":
-                 string ="HW objectcount paramtet in hardware object"+str(count+1)+" shall be greater than 1 for " \
+                 string ="HW objectcount paramter in hardware object"+str(count+1)+" shall be greater than 1 for " \
                          "a Basic type object"
                  self.display_error(string)
                  self.generation_flag = False
@@ -2020,9 +2048,9 @@ class Ui_CanTool(object):
                 string="In hardware object"+str(count+1)+" a receive object shall have a filter container"
                 self.display_error(string)
                 self.generation_flag = False
-            elif  handle_type == "BASIC"  and gen_mul_trans[0].isChecked()==False:
-                   string="In hardware object"+str(count+1)+" Multiplexed Transmission" \
-                           " parameter must be set in general parameters to use (Basic) hardware objects"
+            elif  handle_type == "BASIC"  and gen_mul_trans[0].isChecked()==True and Can_Object_Type =="TRANSMIT" and hw_count < 2:
+                   string="In hardware object"+str(count+1)+" in case of Multiplexed Transmission is set" \
+                           " value  of hwobjectcount shall be at least 2"
                    self.display_error(string)
                    self.generation_flag = False
 
@@ -2032,7 +2060,7 @@ class Ui_CanTool(object):
                         HW_Object_Parameters.append(str(Can_Object_Type[0].currentText()))
                         HW_Object_Parameters.append(str(Can_Id_Type[0].currentText()))
                         HW_Object_Parameters.append(Can_Object_Id[0].text())
-                        HW_Object_Parameters.append(Can_Fd_Padding_Value[0].text())
+                        HW_Object_Parameters.append(str(Can_HardwareObject_UsesPolling[0].isChecked()))
                         HW_Object_Parameters.append(str(Can_Trigger_Transmit_Enable[0].isChecked()))
                         HW_Object_Parameters.append(str(Can_Controller_ref[0].currentText()))
                         HW_Object_Parameters.append(str(HW_object_count[0].text()))
@@ -2042,7 +2070,18 @@ class Ui_CanTool(object):
                     Can_Hw_Filter_Code=HW_Filter.findChildren(QtGui.QLineEdit,"Can_Hw_Filter_Code_1")
                     HW_Filter_Parameters.append(Can_Hw_Filter_Mask[0].text())
                     HW_Filter_Parameters.append(Can_Hw_Filter_Code[0].text())
-                    HW_Object_Parameters.append(HW_Filter_Parameters)
+                    if handle_type == "FULL" and str(Can_Hw_Filter_Mask[0].text()) != "FFFFFFFF":
+                        string="In hardware object"+str(count+1)+" in case of FUll handle type"\
+                           " mask must be equal to FFFFFFFF"
+                        self.display_error(string)
+                        self.generation_flag = False
+                    elif handle_type == "BASIC" and (str(Can_Hw_Filter_Mask[0].text()) == str(Can_Hw_Filter_Code[0].text())):
+                        string="In hardware object"+str(count+1)+" in case of BASIC handle type"\
+                           " filter code and mask must (not) be equal"
+                        self.display_error(string)
+                        self.generation_flag = False
+                    else:
+                        HW_Object_Parameters.append(HW_Filter_Parameters)
 
             Hardware_Objects.append(HW_Object_Parameters)
             count = count+1

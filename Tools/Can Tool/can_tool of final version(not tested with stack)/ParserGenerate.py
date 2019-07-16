@@ -101,11 +101,11 @@ class  create_ARXML:
         can_timeout_Value.text = list_cangeneral[2]
 
         ################## CanMainFunctionWakeupPeriod #################
-        param_4=ET.SubElement(CanGeneral_parameters,"ECUC-NUMERICAL-PARAM-VALUE")
-        can_wakeupperiod_shortname = ET.SubElement(param_4,"SHORT-NAME")
-        can_wakeupperiod_shortname.text = "CanMainFunctionWakeupPeriod"
-        can_wakeupperiod_Value = ET.SubElement(param_4,"VALUE")
-        can_wakeupperiod_Value.text = list_cangeneral[3]
+        # param_4=ET.SubElement(CanGeneral_parameters,"ECUC-NUMERICAL-PARAM-VALUE")
+        # can_wakeupperiod_shortname = ET.SubElement(param_4,"SHORT-NAME")
+        # can_wakeupperiod_shortname.text = "CanMainFunctionWakeupPeriod"
+        # can_wakeupperiod_Value = ET.SubElement(param_4,"VALUE")
+        # can_wakeupperiod_Value.text = list_cangeneral[3]
 
         ################# CanMainFunctionModePeriod #####################
         param_5=ET.SubElement(CanGeneral_parameters, "ECUC-NUMERICAL-PARAM-VALUE")
@@ -136,33 +136,33 @@ class  create_ARXML:
         can_BR_API_Value.text=list_cangeneral[7]
 
         ################# CanPublicIcomSupport ########################
-        param_9=ET.SubElement(CanGeneral_parameters,"ECUC-NUMERICAL-PARAM-VALUE")
-        can_icom_shortname=ET.SubElement(param_9,"SHORT-NAME")
-        can_icom_shortname.text="CanPublicIcomSupport"
-        can_icom_Value=ET.SubElement(param_9,"VALUE")
-        can_icom_Value.text=list_cangeneral[8]
+        # param_9=ET.SubElement(CanGeneral_parameters,"ECUC-NUMERICAL-PARAM-VALUE")
+        # can_icom_shortname=ET.SubElement(param_9,"SHORT-NAME")
+        # can_icom_shortname.text="CanPublicIcomSupport"
+        # can_icom_Value=ET.SubElement(param_9,"VALUE")
+        # can_icom_Value.text=list_cangeneral[8]
 
-        # ################## CanLPduReceiveCalloutFunction ############################
+        ################## CanLPduReceiveCalloutFunction ############################
         # param_10=ET.SubElement(CanGeneral_parameters,"ECUC-NUMERICAL-PARAM-VALUE")
         # CanLPduReceiveCalloutFunction_shortname=ET.SubElement(param_10,"SHORT-NAME")
         # CanLPduReceiveCalloutFunction_shortname.text="CanLPduReceiveCalloutFunction"
         # CanLPduReceiveCalloutFunction_value=ET.SubElement(param_10,"VALUE")
-        #CanMainFunctionBusoffPeriod_value.text=list_cangeneral[10] #error will occure ,cause user dosen't provide that value in the GUI
+        # CanMainFunctionBusoffPeriod_value.text=list_cangeneral[10] #error will occure ,cause user dosen't provide that value in the GUI
 
-        ################## CanMainFunctionBusoffPeriod ############################
-        # param_11=ET.SubElement(CanGeneral_parameters,"ECUC-NUMERICAL-PARAM-VALUE")
-        # CanMainFunctionBusoffPeriod_shortname=ET.SubElement(param_11,"SHORT-NAME")
-        # CanMainFunctionBusoffPeriod_shortname.text="CanMainFunctionBusoffPeriod"
-        # CanMainFunctionBusoffPeriod_value=ET.SubElement(param_11,"VALUE")
-        #CanMainFunctionBusoffPeriod_value.text=list_cangeneral[11]#error will occure ,cause user dosen't provide that value in the GUI
+        ################# CanMainFunctionBusoffPeriod ############################
+        param_11=ET.SubElement(CanGeneral_parameters,"ECUC-NUMERICAL-PARAM-VALUE")
+        CanMainFunctionBusoffPeriod_shortname=ET.SubElement(param_11,"SHORT-NAME")
+        CanMainFunctionBusoffPeriod_shortname.text="CanMainFunctionBusoffPeriod"
+        CanMainFunctionBusoffPeriod_value=ET.SubElement(param_11,"VALUE")
+        CanMainFunctionBusoffPeriod_value.text=list_cangeneral[9]#error will occure ,cause user dosen't provide that value in the GUI
 
         ################## CanGeneralReferenceValues ############################
 
         ################## CanOsCounterRef ############################
-        param_12=ET.SubElement(CanGeneralReferenceValues,"ECUC-REFERENCE-VALUE")
-        CanOsCounterRef_shortname=ET.SubElement(param_12,"SHORT-NAME")
-        CanOsCounterRef_shortname.text="CanOsCounterRef"
-        CanOsCounterRef_value=ET.SubElement(param_12,"VALUE-REF",DEST='OsCounter')
+        # param_12=ET.SubElement(CanGeneralReferenceValues,"ECUC-REFERENCE-VALUE")
+        # CanOsCounterRef_shortname=ET.SubElement(param_12,"SHORT-NAME")
+        # CanOsCounterRef_shortname.text="CanOsCounterRef"
+        # CanOsCounterRef_value=ET.SubElement(param_12,"VALUE-REF",DEST='OsCounter')
 
         ################## CanSupportTTCANRef ############################
         # param_13=ET.SubElement(CanGeneralReferenceValues,"ECUC-REFERENCE-VALUE")
@@ -284,10 +284,10 @@ class  create_ARXML:
         #CanCpuClockRef_Value.text=CanController[9]#for now
 
         ################### CanWakeupSourceRef ####################
-        Param_12=ET.SubElement(CanControllerRefernces, "ECUC-REFERENCE-VALUE")
-        CanCpuClockRef_shortname  =ET.SubElement(Param_12, "SHORT-NAME")
-        CanCpuClockRef_shortname.text = "CanWakeupSourceRef"
-        CanCpuClockRef_Value=ET.SubElement(Param_12, "VALUE-REF", DEST='CanWakeupSource')
+        # Param_12=ET.SubElement(CanControllerRefernces, "ECUC-REFERENCE-VALUE")
+        # CanCpuClockRef_shortname  =ET.SubElement(Param_12, "SHORT-NAME")
+        # CanCpuClockRef_shortname.text = "CanWakeupSourceRef"
+        # CanCpuClockRef_Value=ET.SubElement(Param_12, "VALUE-REF", DEST='CanWakeupSource')
         #CanCpuClockRef_Value.text=CanController[9]#for now
 
         ############## generating Can Controller SubContainers ############
@@ -403,12 +403,12 @@ class  create_ARXML:
         CanObjectID_Name.text=("CanObjectId")
         CanObjectID_Value=ET.SubElement(param4, "VALUE")
         CanObjectID_Value.text=HWObject_List[3]
-        ################# CanFdPaddingValue #####################
-        param5=ET.SubElement(param,"ECUC-NUMERICAL-PARAM-VALUE")
-        CanFdPaddingValue_Name=ET.SubElement(param5,"SHORT-NAME")
-        CanFdPaddingValue_Name.text=("CanFdPaddingValue")
-        CanFdPaddingValue_Value=ET.SubElement(param5,"VALUE")
-        CanFdPaddingValue_Value.text = HWObject_List[4]
+        ################# Can_HardwareObject_UsesPolling #####################
+        # param5=ET.SubElement(param,"ECUC-NUMERICAL-PARAM-VALUE")
+        # CanFdPaddingValue_Name=ET.SubElement(param5,"SHORT-NAME")
+        # CanFdPaddingValue_Name.text=("CanHardwareObjectUsesPolling")
+        # CanFdPaddingValue_Value=ET.SubElement(param5,"VALUE")
+        # CanFdPaddingValue_Value.text = HWObject_List[4]
         ################# CanTriggerTransmitEnable #####################
         param6=ET.SubElement(param, "ECUC-NUMERICAL-PARAM-VALUE")
         CanTriggerTransmitEnable_Name = ET.SubElement(param6, "SHORT-NAME")
@@ -433,10 +433,10 @@ class  create_ARXML:
         CanControllerRef_Value=ET.SubElement(param8, "VALUE", DEST='ECUC-REFERENCE-VALUE')
         CanControllerRef_Value.text=HWObject_List[6]
         ################# CanMainFunctionBusoffPeriod #####################
-        param9 = ET.SubElement(param7, "ECUC-NUMERICAL-PARAM-VALUE")
-        CanMainFunctionBusoffPeriod_Name=ET.SubElement(param9,"SHORT-NAME")
-        CanMainFunctionBusoffPeriod_Name.text=("CanMainFunctionBusoffPeriod_"+str(self.HW_Count))
-        CanMainFunctionBusoffPeriod_Value=ET.SubElement(param9, "VALUE", DEST='CanMainFunctionBusoffPeriod')
+        # param9 = ET.SubElement(param7, "ECUC-NUMERICAL-PARAM-VALUE")
+        # CanMainFunctionBusoffPeriod_Name=ET.SubElement(param9,"SHORT-NAME")
+        # CanMainFunctionBusoffPeriod_-Name.text=("CanMainFunctionBusoffPeriod_"+str(self.HW_Count))
+        # CanMainFunctionBusoffPeriod_Value=ET.SubElement(param9, "VALUE", DEST='CanMainFunctionBusoffPeriod')
 
 
         ############### generating Can Hardware object SubContainers #############
