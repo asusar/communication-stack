@@ -1022,10 +1022,7 @@ Std_ReturnType Can_Write(Can_HwHandleType HTH , Can_PduType* PduInfo)
 
                                 }
                             sCANMessage.pui8MsgData =PduInfo->sdu;
-                            uint8 x[3];
-                            uint8 i;
-                            for(i=0;i<3;i++)
-                                x[i] = PduInfo->sdu[i];
+                          
 
                             /*[SWS_CAN_00502]  If PduInfo->SduLength does not match possible DLC values CanDrv
                             shall use the next higher valid DLC for transmission with initialisation of unused bytes
