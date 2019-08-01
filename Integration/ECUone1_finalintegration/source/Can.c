@@ -826,12 +826,7 @@ Std_ReturnType Can_Write(Can_HwHandleType HTH , Can_PduType* PduInfo)
                                              N.B:Our TIVA c doesn't support FD*/
 
 
-                                                uint8 i;
-                                                uint8 x[8]=0;
-                                                for ( i =0; i<8; i++)
-                                                {
-                                                    x[i] =  sCANMessage.pui8MsgData[i];
-                                                }
+                                             
                                             sCANMessage.ui32MsgIDMask = 0U;
                                             if(hohobj->CanIdType==EXTENDED)
                                             {
