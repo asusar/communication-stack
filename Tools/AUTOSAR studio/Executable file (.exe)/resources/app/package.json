@@ -5,7 +5,7 @@
   "private": true,
   "main": "js/main.js",
   "devDependencies": {
-    "electron": "^3.1.5",
+    "electron": "^7.2.4",
     "electron-packager": "^13.0.1"
   },
   "scripts": {
